@@ -1,0 +1,74 @@
+=== int getter 0x00439680 ===
+  0x0044BEA3  base=LEA ecx, [ebp - 0x34]
+  0x0044C074  base=None
+  0x004713BE  base=None
+  0x00472025  base=None
+  0x00476873  base=None
+  0x00476954  base=None
+  0x00476AA6  base=None
+  0x00476BC2  base=None
+  0x00476D7B  base=None
+  0x00476F50  base=None
+  0x004773FD  base=None
+  0x00477952  base=None
+  0x00477ADC  base=None
+  0x00477D5A  base=None
+  0x00478122  base=None
+  0x004783D8  base=LEA ecx, [ebp - 0x4dd8]
+  0x00478602  base=None
+  0x0047874B  base=None
+  0x00478925  base=None
+  0x00478A69  base=None
+  0x00478C4D  base=None
+  0x00478D46  base=LEA ecx, [ebp - 0x6df8]
+  0x0047910A  base=None
+  0x004794EA  base=None
+  0x004796D5  base=None
+  0x00479916  base=None
+  0x004A1D25  base=LEA ecx, [ebp - 0x102c]
+  summary:
+    None                         23
+    LEA ecx, [ebp - 0x34]        1
+    LEA ecx, [ebp - 0x4dd8]      1
+    LEA ecx, [ebp - 0x6df8]      1
+    LEA ecx, [ebp - 0x102c]      1
+
+=== str getter 0x004396F0 ===
+  0x00439D47  base=None
+  0x0044C685  base=None
+  0x0044C986  base=None
+  0x0044EB25  base=None
+  0x0044EE1D  base=None
+  0x0044EF00  base=None
+  0x00455B07  base=None
+  0x004713F6  base=None
+  0x00471464  base=None
+  0x004721C1  base=None
+  0x00472220  base=None
+  0x00472381  base=None
+  0x00476AE1  base=None
+  0x004791AA  base=None
+  0x00479257  base=LEA ecx, [ebp - 0x16ef8]
+  0x0047937E  base=LEA ecx, [ebp - 0x12eb8]
+  0x004799D0  base=None
+  0x00479AC7  base=None
+  0x00479CAA  base=None
+  0x00479E19  base=None
+  0x0047DCF0  base=None
+  0x0048CAC3  base=None
+  0x004B3C0C  base=None
+  0x004B3DA1  base=None
+  0x004B5C26  base=None
+  summary:
+    None                         23
+    LEA ecx, [ebp - 0x16ef8]     1
+    LEA ecx, [ebp - 0x12eb8]     1
+
+=== find-key 0x00438920 ===
+  0x0040B004  base=ecx, 0x280
+  0x00439696  base=ecx, 0x268
+  0x00439704  base=ecx, 0x268
+  summary:
+    ecx, 0x268                   2
+    ecx, 0x280                   1
+

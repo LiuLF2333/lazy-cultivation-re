@@ -1,0 +1,187 @@
+### candidate dispatcher 0x41A340 region ###
+--- 0x41A330 0x0041A330 .. 0x0041A410 ---
+0x0041A330 off=0x019730 ec                     in al, dx
+0x0041A331 off=0x019731 2b55f0                 sub edx, dword ptr [ebp - 0x10]
+0x0041A334 off=0x019734 8955f4                 mov dword ptr [ebp - 0xc], edx
+0x0041A337 off=0x019737 7505                   jne 0x41a33e
+0x0041A339 off=0x019739 8b4508                 mov eax, dword ptr [ebp + 8]
+0x0041A33C off=0x01973C eb0e                   jmp 0x41a34c
+0x0041A33E off=0x01973E e835491f00             call 0x60ec78
+0x0041A343 off=0x019743 99                     cdq 
+0x0041A344 off=0x019744 f77df4                 idiv dword ptr [ebp - 0xc]
+0x0041A347 off=0x019747 0355f0                 add edx, dword ptr [ebp - 0x10]
+0x0041A34A off=0x01974A 8bc2                   mov eax, edx
+0x0041A34C off=0x01974C 8be5                   mov esp, ebp
+0x0041A34E off=0x01974E 5d                     pop ebp
+0x0041A34F off=0x01974F c3                     ret 
+0x0041A350 off=0x019750 cc                     int3 
+0x0041A351 off=0x019751 cc                     int3 
+0x0041A352 off=0x019752 cc                     int3 
+0x0041A353 off=0x019753 cc                     int3 
+0x0041A354 off=0x019754 cc                     int3 
+0x0041A355 off=0x019755 cc                     int3 
+0x0041A356 off=0x019756 cc                     int3 
+0x0041A357 off=0x019757 cc                     int3 
+0x0041A358 off=0x019758 cc                     int3 
+0x0041A359 off=0x019759 cc                     int3 
+0x0041A35A off=0x01975A cc                     int3 
+0x0041A35B off=0x01975B cc                     int3 
+0x0041A35C off=0x01975C cc                     int3 
+0x0041A35D off=0x01975D cc                     int3 
+0x0041A35E off=0x01975E cc                     int3 
+0x0041A35F off=0x01975F cc                     int3 
+0x0041A360 off=0x019760 55                     push ebp
+0x0041A361 off=0x019761 8bec                   mov ebp, esp
+0x0041A363 off=0x019763 6aff                   push -1
+0x0041A365 off=0x019765 68be0e6300             push 0x630ebe
+0x0041A36A off=0x01976A 64a100000000           mov eax, dword ptr fs:[0]
+0x0041A370 off=0x019770 50                     push eax
+0x0041A371 off=0x019771 83ec64                 sub esp, 0x64
+0x0041A374 off=0x019774 a1c4bf6b00             mov eax, dword ptr [0x6bbfc4]
+0x0041A379 off=0x019779 33c5                   xor eax, ebp
+0x0041A37B off=0x01977B 50                     push eax
+0x0041A37C off=0x01977C 8d45f4                 lea eax, [ebp - 0xc]
+0x0041A37F off=0x01977F 64a300000000           mov dword ptr fs:[0], eax
+0x0041A385 off=0x019785 8b4508                 mov eax, dword ptr [ebp + 8]
+0x0041A388 off=0x019788 8b08                   mov ecx, dword ptr [eax]
+0x0041A38A off=0x01978A 894dc0                 mov dword ptr [ebp - 0x40], ecx
+0x0041A38D off=0x01978D 8b55c0                 mov edx, dword ptr [ebp - 0x40]
+0x0041A390 off=0x019790 8955f0                 mov dword ptr [ebp - 0x10], edx
+0x0041A393 off=0x019793 817df02f010000         cmp dword ptr [ebp - 0x10], 0x12f
+0x0041A39A off=0x01979A 7f34                   jg 0x41a3d0
+0x0041A39C off=0x01979C 817df02f010000         cmp dword ptr [ebp - 0x10], 0x12f
+0x0041A3A3 off=0x0197A3 0f84220e0000           je 0x41b1cb
+0x0041A3A9 off=0x0197A9 8b45f0                 mov eax, dword ptr [ebp - 0x10]
+0x0041A3AC off=0x0197AC 83e801                 sub eax, 1
+0x0041A3AF off=0x0197AF 8945f0                 mov dword ptr [ebp - 0x10], eax
+0x0041A3B2 off=0x0197B2 817df0fe000000         cmp dword ptr [ebp - 0x10], 0xfe
+0x0041A3B9 off=0x0197B9 0f87a00f0000           ja 0x41b35f
+0x0041A3BF off=0x0197BF 8b4df0                 mov ecx, dword ptr [ebp - 0x10]
+0x0041A3C2 off=0x0197C2 0fb69174b64100         movzx edx, byte ptr [ecx + 0x41b674]
+0x0041A3C9 off=0x0197C9 ff249528b54100         jmp dword ptr [edx*4 + 0x41b528]
+0x0041A3D0 off=0x0197D0 817df058020000         cmp dword ptr [ebp - 0x10], 0x258
+0x0041A3D7 off=0x0197D7 7f36                   jg 0x41a40f
+0x0041A3D9 off=0x0197D9 817df058020000         cmp dword ptr [ebp - 0x10], 0x258
+0x0041A3E0 off=0x0197E0 0f84630b0000           je 0x41af49
+0x0041A3E6 off=0x0197E6 8b45f0                 mov eax, dword ptr [ebp - 0x10]
+0x0041A3E9 off=0x0197E9 2d30010000             sub eax, 0x130
+0x0041A3EE off=0x0197EE 8945f0                 mov dword ptr [ebp - 0x10], eax
+0x0041A3F1 off=0x0197F1 817df0c5000000         cmp dword ptr [ebp - 0x10], 0xc5
+0x0041A3F8 off=0x0197F8 0f87610f0000           ja 0x41b35f
+0x0041A3FE off=0x0197FE 8b4df0                 mov ecx, dword ptr [ebp - 0x10]
+0x0041A401 off=0x019801 0fb691acb74100         movzx edx, byte ptr [ecx + 0x41b7ac]
+0x0041A408 off=0x019808 ff249574b74100         jmp dword ptr [edx*4 + 0x41b774]
+0x0041A40F off=0x01980F 8b                     db 0x8B
+
+### table 0x41B528 ###
+  [ 0] 0x0041A42E
+  [ 1] 0x0041A443
+  [ 2] 0x0041A45A
+  [ 3] 0x0041A471
+  [ 4] 0x0041A488
+  [ 5] 0x0041A49F
+  [ 6] 0x0041A4FB
+  [ 7] 0x0041A518
+  [ 8] 0x0041A535
+  [ 9] 0x0041A5A5
+  [10] 0x0041A5C2
+  [11] 0x0041A5DF
+  [12] 0x0041A5FC
+  [13] 0x0041A619
+  [14] 0x0041A636
+  [15] 0x0041A64D
+  [16] 0x0041A66A
+  [17] 0x0041A681
+  [18] 0x0041A6A6
+  [19] 0x0041A6C3
+  [20] 0x0041A6E0
+  [21] 0x0041A6F7
+  [22] 0x0041A720
+  [23] 0x0041A749
+  [24] 0x0041A770
+  [25] 0x0041A799
+  [26] 0x0041A7C2
+  [27] 0x0041A4E4
+  [28] 0x0041A7D9
+  [29] 0x0041A804
+  [30] 0x0041A82F
+  [31] 0x0041A85A
+  [32] 0x0041A885
+  [33] 0x0041A8B0
+  [34] 0x0041A8DB
+  [35] 0x0041A906
+  [36] 0x0041A931
+  [37] 0x0041A95C
+  [38] 0x0041A987
+  [39] 0x0041A9B2
+  [40] 0x0041AAA8
+  [41] 0x0041A9DD
+  [42] 0x0041AA06
+  [43] 0x0041AA2F
+  [44] 0x0041AA56
+  [45] 0x0041AA7F
+  [46] 0x0041AB19
+  [47] 0x0041AB44
+  [48] 0x0041ABDC
+  [49] 0x0041ABFF
+  [50] 0x0041AC22
+  [51] 0x0041AC45
+  [52] 0x0041AAD3
+  [53] 0x0041AD3A
+  [54] 0x0041AC68
+  [55] 0x0041AD57
+  [56] 0x0041ADAD
+  [57] 0x0041AEAC
+  [58] 0x0041AE3D
+  [59] 0x0041AE62
+  [60] 0x0041AE87
+  [61] 0x0041AED1
+  [62] 0x0041AEF6
+  [63] 0x0041AF1B
+  [64] 0x0041AF32
+  [65] 0x0041ADCA
+  [66] 0x0041ADF5
+  [67] 0x0041AE20
+  [68] 0x0041A4B6
+  [69] 0x0041A4CD
+
+--- table bytes 0x0041B528 .. 0x0041B568 ---
+0x0041B528 off=0x01A928 2ea4                   movsb byte ptr es:[edi], byte ptr cs:[esi]
+0x0041B52A off=0x01A92A 41                     inc ecx
+0x0041B52B off=0x01A92B 0043a4                 add byte ptr [ebx - 0x5c], al
+0x0041B52E off=0x01A92E 41                     inc ecx
+0x0041B52F off=0x01A92F 005aa4                 add byte ptr [edx - 0x5c], bl
+0x0041B532 off=0x01A932 41                     inc ecx
+0x0041B533 off=0x01A933 0071a4                 add byte ptr [ecx - 0x5c], dh
+0x0041B536 off=0x01A936 41                     inc ecx
+0x0041B537 off=0x01A937 0088a441009f           add byte ptr [eax - 0x60ffbe5c], cl
+0x0041B53D off=0x01A93D a4                     movsb byte ptr es:[edi], byte ptr [esi]
+0x0041B53E off=0x01A93E 41                     inc ecx
+0x0041B53F off=0x01A93F 00fb                   add bl, bh
+0x0041B541 off=0x01A941 a4                     movsb byte ptr es:[edi], byte ptr [esi]
+0x0041B542 off=0x01A942 41                     inc ecx
+0x0041B543 off=0x01A943 0018                   add byte ptr [eax], bl
+0x0041B545 off=0x01A945 a5                     movsd dword ptr es:[edi], dword ptr [esi]
+0x0041B546 off=0x01A946 41                     inc ecx
+0x0041B547 off=0x01A947 0035a54100a5           add byte ptr [0xa50041a5], dh
+0x0041B54D off=0x01A94D a5                     movsd dword ptr es:[edi], dword ptr [esi]
+0x0041B54E off=0x01A94E 41                     inc ecx
+0x0041B54F off=0x01A94F 00c2                   add dl, al
+0x0041B551 off=0x01A951 a5                     movsd dword ptr es:[edi], dword ptr [esi]
+0x0041B552 off=0x01A952 41                     inc ecx
+0x0041B553 off=0x01A953 00df                   add bh, bl
+0x0041B555 off=0x01A955 a5                     movsd dword ptr es:[edi], dword ptr [esi]
+0x0041B556 off=0x01A956 41                     inc ecx
+0x0041B557 off=0x01A957 00fc                   add ah, bh
+0x0041B559 off=0x01A959 a5                     movsd dword ptr es:[edi], dword ptr [esi]
+0x0041B55A off=0x01A95A 41                     inc ecx
+0x0041B55B off=0x01A95B 0019                   add byte ptr [ecx], bl
+0x0041B55D off=0x01A95D a6                     cmpsb byte ptr [esi], byte ptr es:[edi]
+0x0041B55E off=0x01A95E 41                     inc ecx
+0x0041B55F off=0x01A95F 0036                   add byte ptr [esi], dh
+0x0041B561 off=0x01A961 a6                     cmpsb byte ptr [esi], byte ptr es:[edi]
+0x0041B562 off=0x01A962 41                     inc ecx
+0x0041B563 off=0x01A963 004da6                 add byte ptr [ebp - 0x5a], cl
+0x0041B566 off=0x01A966 41                     inc ecx
+0x0041B567 off=0x01A967 00                     db 0x00
+

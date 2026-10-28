@@ -1,0 +1,51 @@
+### sites with sub reg,0x64 followed within 0x40 bytes by cmp ...,0x20 ###
+
+  *** 0x004183F0 (off 0x0177F0)
+      0x004183F0 83ea64                 sub edx, 0x64
+      0x004183F3 8995f8feffff           mov dword ptr [ebp - 0x108], edx
+      0x004183F9 83bdf8feffff20         cmp dword ptr [ebp - 0x108], 0x20
+      0x00418400 0f877a080000           ja 0x418c80
+      0x00418406 8b85f8feffff           mov eax, dword ptr [ebp - 0x108]
+      0x0041840C ff2485a88c4100         jmp dword ptr [eax*4 + 0x418ca8]
+      0x00418413 8b4d0c                 mov ecx, dword ptr [ebp + 0xc]
+      0x00418416 8b5108                 mov edx, dword ptr [ecx + 8]
+      0x00418419 52                     push edx
+      0x0041841A 68b0126800             push 0x6812b0
+      0x0041841F 8d85fcfeffff           lea eax, [ebp - 0x104]
+      0x00418425 50                     push eax
+      0x00418426 e8c560ffff             call 0x40e4f0
+      0x0041842B 83c40c                 add esp, 0xc
+      0x0041842E e94d080000             jmp 0x418c80
+      0x00418433 8b4d0c                 mov ecx, dword ptr [ebp + 0xc]
+      0x00418436 8b5108                 mov edx, dword ptr [ecx + 8]
+      0x00418439 52                     push edx
+      0x0041843A 68cc126800             push 0x6812cc
+      0x0041843F 8d                     db 0x8D
+
+  *** 0x00507553 (off 0x106953)
+      0x00507553 83ec64                 sub esp, 0x64
+      0x00507556 a1c4bf6b00             mov eax, dword ptr [0x6bbfc4]
+      0x0050755B 33c5                   xor eax, ebp
+      0x0050755D 8945fc                 mov dword ptr [ebp - 4], eax
+      0x00507560 56                     push esi
+      0x00507561 8b7508                 mov esi, dword ptr [ebp + 8]
+      0x00507564 8d45a0                 lea eax, [ebp - 0x60]
+      0x00507567 57                     push edi
+      0x00507568 33ff                   xor edi, edi
+      0x0050756A 6a5c                   push 0x5c
+      0x0050756C 57                     push edi
+      0x0050756D 50                     push eax
+      0x0050756E 897d9c                 mov dword ptr [ebp - 0x64], edi
+      0x00507571 e80af20f00             call 0x606780
+      0x00507576 83c40c                 add esp, 0xc
+      0x00507579 85f6                   test esi, esi
+      0x0050757B 740c                   je 0x507589
+      0x0050757D 56                     push esi
+      0x0050757E e80e201100             call 0x619591
+      0x00507583 59                     pop ecx
+      0x00507584 83f820                 cmp eax, 0x20
+      0x00507587 7354                   jae 0x5075dd
+      0x00507589 56                     push esi
+      0x0050758A 8d45bc                 lea eax, [ebp - 0x44]
+
+total 2 candidate sites

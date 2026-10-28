@@ -1,0 +1,124 @@
+'所有基础属性增加'  0x00685E32  xrefs=0
+
+'所有基础属性增加'  0x00685E7E  xrefs=0
+
+'所有基础属性增加'  0x00685ECC  xrefs=0
+
+'增加年龄随机奖励基础属性'  0x0068631E  xrefs=0
+
+'增加年龄随机奖励基础属性'  0x006863FE  xrefs=0
+
+'机缘永久增加了'  0x00680AB0  xrefs=0
+
+'机缘永久增加了'  0x00680B28  xrefs=0
+
+'机缘永久增加了'  0x00680BA4  xrefs=0
+
+'所有基础属性奖励'  0x00685F0C  xrefs=0
+
+'所有基础属性奖励'  0x00685F3C  xrefs=0
+
+'所有基础属性奖励'  0x00685F6C  xrefs=0
+
+'你服用了'  0x0067FF48  xrefs=1
+    0x004123C5 6848ff6700           push 0x67ff48   funchead=?
+
+'你服用了'  0x0067FF7C  xrefs=1
+    0x004125B5 687cff6700           push 0x67ff7c   funchead=?
+
+'最多可服用'  0x006817B4  xrefs=0
+
+'最多可服用'  0x006817EE  xrefs=0
+
+'最多可服用'  0x00681828  xrefs=0
+
+'服用过多后将无效'  0x0068171C  xrefs=0
+
+'服用过多后将无效'  0x00681756  xrefs=0
+
+'服用过多后将无效'  0x006818EC  xrefs=0
+
+'使用后立即增加使用者'  0x006816FC  xrefs=1
+    0x00418732 68fc166800           push 0x6816fc   funchead=0x004183B0
+
+'使用后立即增加使用者'  0x00681734  xrefs=1
+    0x00418762 6834176800           push 0x681734   funchead=0x004183B0
+
+'使用后立即增加使用者'  0x0068176C  xrefs=1
+    0x00418783 686c176800           push 0x68176c   funchead=0x004183B0
+
+'使用后立即增加使用者'  0x00681794  xrefs=1
+    0x004187C0 6894176800           push 0x681794   funchead=0x004183B0
+
+'使用后立即增加使用者'  0x006817CC  xrefs=1
+    0x004187FA 68cc176800           push 0x6817cc   funchead=0x004183B0
+
+'使用后立即增加使用者'  0x00681808  xrefs=1
+    0x00418825 6808186800           push 0x681808   funchead=0x004183B0
+
+'无法服用'  0x00689C84  xrefs=0
+
+'服用后使'  0x00681AFC  xrefs=1
+    0x00418B37 68fc1a6800           push 0x681afc   funchead=0x004183B0
+
+'服用后使'  0x00681B20  xrefs=1
+    0x00418B66 68201b6800           push 0x681b20   funchead=0x004183B0
+
+'属性异常'  0x00689DBC  xrefs=1
+    0x00479CC5 68bc9d6800           push 0x689dbc   funchead=0x004798B0
+
+'无效属性'  0x00681180  xrefs=1
+    0x00417E8A 6880116800           push 0x681180   funchead=0x00417E40
+
+'增加了'  0x00680328  xrefs=0
+
+'增加了'  0x00680AB8  xrefs=0
+
+'增加了'  0x00680B30  xrefs=0
+
+'增加了'  0x00680BAC  xrefs=0
+
+'增加了'  0x006879BE  xrefs=0
+
+'增加了'  0x00688BD8  xrefs=0
+
+'增加了'  0x00689554  xrefs=0
+
+'增加了'  0x00689630  xrefs=0
+
+'增加了'  0x0068BEE2  xrefs=0
+
+'增加了'  0x0068E766  xrefs=0
+
+'增加了'  0x0068E78C  xrefs=0
+
+'服用后立即增加使用者'  0x006814C4  xrefs=6
+    0x004185CC 68c4146800           push 0x6814c4   funchead=0x004183B0
+    0x004882A7 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x00487A30
+    0x004BB460 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x004BB3B0
+    0x004F1C88 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x004F1B9C
+    0x00588CD8 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x00588604
+    0x005F9088 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x005F8F84
+
+'服用后立即增加使用者'  0x006815C4  xrefs=1
+    0x0041861E 68c4156800           push 0x6815c4   funchead=0x004183B0
+
+'服用后立即增加使用者的随机基础属性'  0x006814C4  xrefs=6
+    0x004185CC 68c4146800           push 0x6814c4   funchead=0x004183B0
+    0x004882A7 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x00487A30
+    0x004BB460 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x004BB3B0
+    0x004F1C88 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x004F1B9C
+    0x00588CD8 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x00588604
+    0x005F9088 ff83c4146800         inc dword ptr [ebx + 0x6814c4]   funchead=0x005F8F84
+
+'服用后能提高一定的境界值'  0x00681FA0  xrefs=0
+
+'当前属性'  0x0069138C  xrefs=1
+    0x004BC31E 688c136900           push 0x69138c   funchead=0x004BBBC0
+
+'修为增加了'  0x0068E788  xrefs=0
+
+'亲密增加了'  0x00688BD4  xrefs=0
+
+'界点增加了'  0x0068E762  xrefs=0
+

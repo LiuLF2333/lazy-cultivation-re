@@ -1,0 +1,261 @@
+--- around 0x479cc5 (属性异常) 0x00479B00 .. 0x00479E20 ---
+0x00479B00 off=0x078F00 f8                     clc 
+0x00479B01 off=0x078F01 0200                   add al, byte ptr [eax]
+0x00479B03 off=0x078F03 898590efffff           mov dword ptr [ebp - 0x1070], eax
+0x00479B09 off=0x078F09 83bd90efffff00         cmp dword ptr [ebp - 0x1070], 0
+0x00479B10 off=0x078F10 7407                   je 0x479b19
+0x00479B12 off=0x078F12 32c0                   xor al, al
+0x00479B14 off=0x078F14 e909060000             jmp 0x47a122
+0x00479B19 off=0x078F19 8b8dc0efffff           mov ecx, dword ptr [ebp - 0x1040]
+0x00479B1F off=0x078F1F 8b5108                 mov edx, dword ptr [ecx + 8]
+0x00479B22 off=0x078F22 52                     push edx
+0x00479B23 off=0x078F23 8b85dcefffff           mov eax, dword ptr [ebp - 0x1024]
+0x00479B29 off=0x078F29 052c060000             add eax, 0x62c
+0x00479B2E off=0x078F2E 50                     push eax
+0x00479B2F off=0x078F2F 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479B35 off=0x078F35 e8a6f80200             call 0x4a93e0
+0x00479B3A off=0x078F3A 8985b0efffff           mov dword ptr [ebp - 0x1050], eax
+0x00479B40 off=0x078F40 83bdb0efffff00         cmp dword ptr [ebp - 0x1050], 0
+0x00479B47 off=0x078F47 0f8411010000           je 0x479c5e
+0x00479B4D off=0x078F4D 6a01                   push 1
+0x00479B4F off=0x078F4F 8b8dc0efffff           mov ecx, dword ptr [ebp - 0x1040]
+0x00479B55 off=0x078F55 8b510c                 mov edx, dword ptr [ecx + 0xc]
+0x00479B58 off=0x078F58 52                     push edx
+0x00479B59 off=0x078F59 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479B5F off=0x078F5F e86c1d0000             call 0x47b8d0
+0x00479B64 off=0x078F64 8985bcefffff           mov dword ptr [ebp - 0x1044], eax
+0x00479B6A off=0x078F6A 8b85b0efffff           mov eax, dword ptr [ebp - 0x1050]
+0x00479B70 off=0x078F70 8985c8efffff           mov dword ptr [ebp - 0x1038], eax
+0x00479B76 off=0x078F76 83bdbcefffff00         cmp dword ptr [ebp - 0x1044], 0
+0x00479B7D off=0x078F7D 7507                   jne 0x479b86
+0x00479B7F off=0x078F7F 32c0                   xor al, al
+0x00479B81 off=0x078F81 e99c050000             jmp 0x47a122
+0x00479B86 off=0x078F86 8b8dc8efffff           mov ecx, dword ptr [ebp - 0x1038]
+0x00479B8C off=0x078F8C 51                     push ecx
+0x00479B8D off=0x078F8D 8b95dcefffff           mov edx, dword ptr [ebp - 0x1024]
+0x00479B93 off=0x078F93 8b02                   mov eax, dword ptr [edx]
+0x00479B95 off=0x078F95 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479B9B off=0x078F9B 8b505c                 mov edx, dword ptr [eax + 0x5c]
+0x00479B9E off=0x078F9E ffd2                   call edx
+0x00479BA0 off=0x078FA0 0fb6c0                 movzx eax, al
+0x00479BA3 off=0x078FA3 85c0                   test eax, eax
+0x00479BA5 off=0x078FA5 7419                   je 0x479bc0
+0x00479BA7 off=0x078FA7 6a01                   push 1
+0x00479BA9 off=0x078FA9 8b8dc8efffff           mov ecx, dword ptr [ebp - 0x1038]
+0x00479BAF off=0x078FAF e8cc85fbff             call 0x432180
+0x00479BB4 off=0x078FB4 50                     push eax
+0x00479BB5 off=0x078FB5 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479BBB off=0x078FBB e8907bffff             call 0x471750
+0x00479BC0 off=0x078FC0 6a00                   push 0
+0x00479BC2 off=0x078FC2 8d8dc4efffff           lea ecx, [ebp - 0x103c]
+0x00479BC8 off=0x078FC8 51                     push ecx
+0x00479BC9 off=0x078FC9 8b5508                 mov edx, dword ptr [ebp + 8]
+0x00479BCC off=0x078FCC 52                     push edx
+0x00479BCD off=0x078FCD 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479BD3 off=0x078FD3 e8b898ffff             call 0x473490
+0x00479BD8 off=0x078FD8 8b85bcefffff           mov eax, dword ptr [ebp - 0x1044]
+0x00479BDE off=0x078FDE 50                     push eax
+0x00479BDF off=0x078FDF 8b8dc8efffff           mov ecx, dword ptr [ebp - 0x1038]
+0x00479BE5 off=0x078FE5 51                     push ecx
+0x00479BE6 off=0x078FE6 6a25                   push 0x25
+0x00479BE8 off=0x078FE8 e8a3d3f9ff             call 0x416f90
+0x00479BED off=0x078FED 83c40c                 add esp, 0xc
+0x00479BF0 off=0x078FF0 6a00                   push 0
+0x00479BF2 off=0x078FF2 8b95b0efffff           mov edx, dword ptr [ebp - 0x1050]
+0x00479BF8 off=0x078FF8 52                     push edx
+0x00479BF9 off=0x078FF9 680b040000             push 0x40b
+0x00479BFE off=0x078FFE a16c886c00             mov eax, dword ptr [0x6c886c]
+0x00479C03 off=0x079003 50                     push eax
+0x00479C04 off=0x079004 ff15f4566400           call dword ptr [0x6456f4]
+0x00479C0A off=0x07900A 83bdc8efffff00         cmp dword ptr [ebp - 0x1038], 0
+0x00479C11 off=0x079011 740d                   je 0x479c20
+0x00479C13 off=0x079013 6aff                   push -1
+0x00479C15 off=0x079015 8b8dc8efffff           mov ecx, dword ptr [ebp - 0x1038]
+0x00479C1B off=0x07901B e8c03e0200             call 0x49dae0
+0x00479C20 off=0x079020 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479C26 off=0x079026 83b9c407000000         cmp dword ptr [ecx + 0x7c4], 0
+0x00479C2D off=0x07902D 7528                   jne 0x479c57
+0x00479C2F off=0x07902F 8b95bcefffff           mov edx, dword ptr [ebp - 0x1044]
+0x00479C35 off=0x079035 83ba9807000000         cmp dword ptr [edx + 0x798], 0
+0x00479C3C off=0x07903C 7519                   jne 0x479c57
+0x00479C3E off=0x07903E 6a00                   push 0
+0x00479C40 off=0x079040 8b8dbcefffff           mov ecx, dword ptr [ebp - 0x1044]
+0x00479C46 off=0x079046 e83585fbff             call 0x432180
+0x00479C4B off=0x07904B 50                     push eax
+0x00479C4C off=0x07904C 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479C52 off=0x079052 e8f97affff             call 0x471750
+0x00479C57 off=0x079057 b001                   mov al, 1
+0x00479C59 off=0x079059 e9c4040000             jmp 0x47a122
+0x00479C5E off=0x07905E e9bd040000             jmp 0x47a120
+0x00479C63 off=0x079063 8b4508                 mov eax, dword ptr [ebp + 8]
+0x00479C66 off=0x079066 83b89002000003         cmp dword ptr [eax + 0x290], 3
+0x00479C6D off=0x07906D 0f858e010000           jne 0x479e01
+0x00479C73 off=0x079073 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479C79 off=0x079079 83b9d407000000         cmp dword ptr [ecx + 0x7d4], 0
+0x00479C80 off=0x079080 7520                   jne 0x479ca2
+0x00479C82 off=0x079082 6a00                   push 0
+0x00479C84 off=0x079084 68b49d6800             push 0x689db4
+0x00479C89 off=0x079089 68889d6800             push 0x689d88
+0x00479C8E off=0x07908E 8b15f0866c00           mov edx, dword ptr [0x6c86f0]
+0x00479C94 off=0x079094 52                     push edx
+0x00479C95 off=0x079095 ff15b0576400           call dword ptr [0x6457b0]
+0x00479C9B off=0x07909B 32c0                   xor al, al
+0x00479C9D off=0x07909D e980040000             jmp 0x47a122
+0x00479CA2 off=0x0790A2 68cb000000             push 0xcb
+0x00479CA7 off=0x0790A7 8b4d08                 mov ecx, dword ptr [ebp + 8]
+0x00479CAA off=0x0790AA e841fafbff             call 0x4396f0
+0x00479CAF off=0x0790AF 8985a0efffff           mov dword ptr [ebp - 0x1060], eax
+0x00479CB5 off=0x0790B5 83bda0efffff00         cmp dword ptr [ebp - 0x1060], 0
+0x00479CBC off=0x0790BC 751f                   jne 0x479cdd
+0x00479CBE off=0x0790BE 6a00                   push 0
+0x00479CC0 off=0x0790C0 68d49d6800             push 0x689dd4
+0x00479CC5 off=0x0790C5 68bc9d6800             push 0x689dbc
+0x00479CCA off=0x0790CA a1f0866c00             mov eax, dword ptr [0x6c86f0]
+0x00479CCF off=0x0790CF 50                     push eax
+0x00479CD0 off=0x0790D0 ff15b0576400           call dword ptr [0x6457b0]
+0x00479CD6 off=0x0790D6 32c0                   xor al, al
+0x00479CD8 off=0x0790D8 e945040000             jmp 0x47a122
+0x00479CDD off=0x0790DD 8b8da0efffff           mov ecx, dword ptr [ebp - 0x1060]
+0x00479CE3 off=0x0790E3 8b5108                 mov edx, dword ptr [ecx + 8]
+0x00479CE6 off=0x0790E6 8995acefffff           mov dword ptr [ebp - 0x1054], edx
+0x00479CEC off=0x0790EC 8b85acefffff           mov eax, dword ptr [ebp - 0x1054]
+0x00479CF2 off=0x0790F2 50                     push eax
+0x00479CF3 off=0x0790F3 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479CF9 off=0x0790F9 8b91d4070000           mov edx, dword ptr [ecx + 0x7d4]
+0x00479CFF off=0x0790FF 81c22c060000           add edx, 0x62c
+0x00479D05 off=0x079105 52                     push edx
+0x00479D06 off=0x079106 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479D0C off=0x07910C e8cff60200             call 0x4a93e0
+0x00479D11 off=0x079111 89858cefffff           mov dword ptr [ebp - 0x1074], eax
+0x00479D17 off=0x079117 83bd8cefffff00         cmp dword ptr [ebp - 0x1074], 0
+0x00479D1E off=0x07911E 741f                   je 0x479d3f
+0x00479D20 off=0x079120 6a00                   push 0
+0x00479D22 off=0x079122 68049e6800             push 0x689e04
+0x00479D27 off=0x079127 68dc9d6800             push 0x689ddc
+0x00479D2C off=0x07912C a1f0866c00             mov eax, dword ptr [0x6c86f0]
+0x00479D31 off=0x079131 50                     push eax
+0x00479D32 off=0x079132 ff15b0576400           call dword ptr [0x6457b0]
+0x00479D38 off=0x079138 32c0                   xor al, al
+0x00479D3A off=0x07913A e9e3030000             jmp 0x47a122
+0x00479D3F off=0x07913F 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479D45 off=0x079145 8b91d4070000           mov edx, dword ptr [ecx + 0x7d4]
+0x00479D4B off=0x07914B 83baf80a000000         cmp dword ptr [edx + 0xaf8], 0
+0x00479D52 off=0x079152 741f                   je 0x479d73
+0x00479D54 off=0x079154 6a00                   push 0
+0x00479D56 off=0x079156 682c9e6800             push 0x689e2c
+0x00479D5B off=0x07915B 680c9e6800             push 0x689e0c
+0x00479D60 off=0x079160 a1f0866c00             mov eax, dword ptr [0x6c86f0]
+0x00479D65 off=0x079165 50                     push eax
+0x00479D66 off=0x079166 ff15b0576400           call dword ptr [0x6457b0]
+0x00479D6C off=0x07916C 32c0                   xor al, al
+0x00479D6E off=0x07916E e9af030000             jmp 0x47a122
+0x00479D73 off=0x079173 8b8dacefffff           mov ecx, dword ptr [ebp - 0x1054]
+0x00479D79 off=0x079179 51                     push ecx
+0x00479D7A off=0x07917A 8b95dcefffff           mov edx, dword ptr [ebp - 0x1024]
+0x00479D80 off=0x079180 8b8ad4070000           mov ecx, dword ptr [edx + 0x7d4]
+0x00479D86 off=0x079186 e805f90200             call 0x4a9690
+0x00479D8B off=0x07918B 0fb6c0                 movzx eax, al
+0x00479D8E off=0x07918E 85c0                   test eax, eax
+0x00479D90 off=0x079190 7420                   je 0x479db2
+0x00479D92 off=0x079192 6a00                   push 0
+0x00479D94 off=0x079194 68609e6800             push 0x689e60
+0x00479D99 off=0x079199 68349e6800             push 0x689e34
+0x00479D9E off=0x07919E 8b0df0866c00           mov ecx, dword ptr [0x6c86f0]
+0x00479DA4 off=0x0791A4 51                     push ecx
+0x00479DA5 off=0x0791A5 ff15b0576400           call dword ptr [0x6457b0]
+0x00479DAB off=0x0791AB 32c0                   xor al, al
+0x00479DAD off=0x0791AD e970030000             jmp 0x47a122
+0x00479DB2 off=0x0791B2 8b95acefffff           mov edx, dword ptr [ebp - 0x1054]
+0x00479DB8 off=0x0791B8 52                     push edx
+0x00479DB9 off=0x0791B9 6a03                   push 3
+0x00479DBB off=0x0791BB 8b85dcefffff           mov eax, dword ptr [ebp - 0x1024]
+0x00479DC1 off=0x0791C1 8b88d4070000           mov ecx, dword ptr [eax + 0x7d4]
+0x00479DC7 off=0x0791C7 e8e42bffff             call 0x46c9b0
+0x00479DCC off=0x0791CC 6a00                   push 0
+0x00479DCE off=0x0791CE 8d8dc4efffff           lea ecx, [ebp - 0x103c]
+0x00479DD4 off=0x0791D4 51                     push ecx
+0x00479DD5 off=0x0791D5 8b5508                 mov edx, dword ptr [ebp + 8]
+0x00479DD8 off=0x0791D8 52                     push edx
+0x00479DD9 off=0x0791D9 8b8ddcefffff           mov ecx, dword ptr [ebp - 0x1024]
+0x00479DDF off=0x0791DF e8ac96ffff             call 0x473490
+0x00479DE4 off=0x0791E4 6a00                   push 0
+0x00479DE6 off=0x0791E6 68c89e6800             push 0x689ec8
+0x00479DEB off=0x0791EB 68689e6800             push 0x689e68
+0x00479DF0 off=0x0791F0 a1f0866c00             mov eax, dword ptr [0x6c86f0]
+0x00479DF5 off=0x0791F5 50                     push eax
+0x00479DF6 off=0x0791F6 ff15b0576400           call dword ptr [0x6457b0]
+0x00479DFC off=0x0791FC e91f030000             jmp 0x47a120
+0x00479E01 off=0x079201 8b4d08                 mov ecx, dword ptr [ebp + 8]
+0x00479E04 off=0x079204 83b99002000004         cmp dword ptr [ecx + 0x290], 4
+0x00479E0B off=0x07920B 0f850f030000           jne 0x47a120
+0x00479E11 off=0x079211 68cc000000             push 0xcc
+0x00479E16 off=0x079216 8b4d08                 mov ecx, dword ptr [ebp + 8]
+0x00479E19 off=0x079219 e8d2f8fbff             call 0x4396f0
+0x00479E1E off=0x07921E 89                     db 0x89
+0x00479E1F off=0x07921F 85                     db 0x85
+
+=== strings near 0x689db0 ===
+  0x00689D88 '当前没有出战的宠物，请设置出战宠物后再来'
+  0x00689D8A '前没有出战的宠物，请设置出战宠物后再来'
+  0x00689D8C '没有出战的宠物，请设置出战宠物后再来'
+  0x00689D8E '有出战的宠物，请设置出战宠物后再来'
+  0x00689D90 '出战的宠物，请设置出战宠物后再来'
+  0x00689D92 '战的宠物，请设置出战宠物后再来'
+  0x00689D94 '的宠物，请设置出战宠物后再来'
+  0x00689D96 '宠物，请设置出战宠物后再来'
+  0x00689D98 '物，请设置出战宠物后再来'
+  0x00689D9A '，请设置出战宠物后再来'
+  0x00689D9C '请设置出战宠物后再来'
+  0x00689D9E '设置出战宠物后再来'
+  0x00689DA0 '置出战宠物后再来'
+  0x00689DA2 '出战宠物后再来'
+  0x00689DA4 '战宠物后再来'
+  0x00689DA6 '宠物后再来'
+  0x00689DA8 '物后再来'
+  0x00689DAA '后再来'
+  0x00689DAC '再来'
+  0x00689DAE '来'
+  0x00689DB4 '错误'
+  0x00689DB6 '误'
+  0x00689DBC '属性异常，无领悟属性'
+  0x00689DBE '性异常，无领悟属性'
+  0x00689DC0 '异常，无领悟属性'
+  0x00689DC2 '常，无领悟属性'
+  0x00689DC4 '，无领悟属性'
+  0x00689DC6 '无领悟属性'
+  0x00689DC8 '领悟属性'
+  0x00689DCA '悟属性'
+  0x00689DCC '属性'
+  0x00689DCE '性'
+  0x00689DD4 '错误'
+  0x00689DD6 '误'
+  0x00689DDC '你的宠物已经掌握此技能，无法宠物领悟'
+  0x00689DDE '的宠物已经掌握此技能，无法宠物领悟'
+  0x00689DE0 '宠物已经掌握此技能，无法宠物领悟'
+  0x00689DE2 '物已经掌握此技能，无法宠物领悟'
+  0x00689DE4 '已经掌握此技能，无法宠物领悟'
+  0x00689DE6 '经掌握此技能，无法宠物领悟'
+  0x00689DE8 '掌握此技能，无法宠物领悟'
+  0x00689DEA '握此技能，无法宠物领悟'
+  0x00689DEC '此技能，无法宠物领悟'
+  0x00689DEE '技能，无法宠物领悟'
+  0x00689DF0 '能，无法宠物领悟'
+  0x00689DF2 '，无法宠物领悟'
+  0x00689DF4 '无法宠物领悟'
+  0x00689DF6 '法宠物领悟'
+  0x00689DF8 '宠物领悟'
+  0x00689DFA '物领悟'
+  0x00689DFC '领悟'
+  0x00689DFE '悟'
+  0x00689E04 '错误'
+  0x00689E06 '误'
+  0x00689E0C '你的宠物正在忙， 不能一心二用'
+  0x00689E0E '的宠物正在忙， 不能一心二用'
+  0x00689E10 '宠物正在忙， 不能一心二用'
+  0x00689E12 '物正在忙， 不能一心二用'
+  0x00689E14 '正在忙， 不能一心二用'
+  0x00689E16 '在忙， 不能一心二用'
+  0x00689E18 '忙， 不能一心二用'
+  0x00689E1A '， 不能一心二用'
+  0x00689E1C ' 不能一心二用'
+  0x00689E1E '不能一心二用'

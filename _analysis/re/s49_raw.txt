@@ -1,0 +1,152 @@
+exists=True size=29423
+first 64 raw bytes: 8f82ea053d7500ea0b7a772cea71100626ea111571100626ea721571100626ea0071100cea730e7a70ea0a337a38ea03167009ea0a337a381073ea0c1d7a1dea
+
+XOR 0xC6 first 1200 bytes decoded as GBK:
+ID,名称,图标,分类,子分类,从分类,品质,等级,条件,判断,条件值,售价,最大叠加,type1,value1,type2,value2,说明
+20001,《江湖功法》,95,3,0,0,3,1,0,0,0,10000,99,200,40700,0,0,使用后可学会基本的江湖技能
+20002,《葵花宝典》,95,3,0,0,3,10,0,0,0,10000,99,200,40701,0,0,欲练此功，必先自宫
+20003,《仙修功法》,97,3,0,0,3,10,0,0,0,10000,99,200,40702,0,0,使用后可学会仙家内功技能
+20004,《血盾功法》,97,3,0,0,3,20,0,0,0,10000,99,200,40703,0,0,使用后可学会血盾神功技能
+20005,《金系功法》,240,3,0,0,2,20,0,0,0,10000,99,200,40704,0,0,记录着一些适合新手修炼的金系功法
+20006,《木系功法》,241,3,0,0,2,20,0,0,0,10000,99,200,40705,0,0,记录着一些适合新手修炼的木系功法
+20007,《水系功法》,242,3,0,0,2,20,0,0,0,10000,99,200,40706,0,0,记录着一些适合新手修炼的水系功法
+20008,《火系功法》,243,3,0,0,2,20,0,0,0,10000,99,200,40707,0,0,记录着一些适合新手修炼的火系功法
+20009,《土系功法》,244,3,0,0,2,20,0,0,0,10000,99,200,40708,0,0,记录着一些适合新手修炼的土系功法
+20010,《吸星大法》,98,3,0,0,5,30,0,0,0,20000,99,200,40005,0,0,教你如何吸取他人的精血为你所用
+20011,《开蛋壳》,96,3,0,0,4,1,0,0,0,20000,99,200,40007,0,0,教你如何使用灵力化形来抵御伤害
+20012,《大侠之路》,96,3,0,0,2,10,0,0,0,20000,99,200,40603,0,0,其实就是教你怎么
+
+--- decode function 0x60ec24 ---
+0x0060EC24 8bff                   mov edi, edi
+0x0060EC26 55                     push ebp
+0x0060EC27 8bec                   mov ebp, esp
+0x0060EC29 51                     push ecx
+0x0060EC2A 6a01                   push 1
+0x0060EC2C 6a0a                   push 0xa
+0x0060EC2E 51                     push ecx
+0x0060EC2F 51                     push ecx
+0x0060EC30 8bc4                   mov eax, esp
+0x0060EC32 6a00                   push 0
+0x0060EC34 ff7508                 push dword ptr [ebp + 8]
+0x0060EC37 50                     push eax
+0x0060EC38 e849edffff             call 0x60d986
+0x0060EC3D 83c40c                 add esp, 0xc
+0x0060EC40 6a00                   push 0
+0x0060EC42 e85aedffff             call 0x60d9a1
+0x0060EC47 83c414                 add esp, 0x14
+0x0060EC4A 8be5                   mov esp, ebp
+0x0060EC4C 5d                     pop ebp
+0x0060EC4D c3                     ret 
+0x0060EC4E 8bff                   mov edi, edi
+0x0060EC50 55                     push ebp
+0x0060EC51 8bec                   mov ebp, esp
+0x0060EC53 51                     push ecx
+0x0060EC54 6a01                   push 1
+0x0060EC56 6a0a                   push 0xa
+0x0060EC58 51                     push ecx
+0x0060EC59 51                     push ecx
+0x0060EC5A 8bc4                   mov eax, esp
+0x0060EC5C 6a00                   push 0
+0x0060EC5E ff7508                 push dword ptr [ebp + 8]
+0x0060EC61 50                     push eax
+0x0060EC62 e81fedffff             call 0x60d986
+0x0060EC67 83c40c                 add esp, 0xc
+0x0060EC6A 6a00                   push 0
+0x0060EC6C e83df6ffff             call 0x60e2ae
+0x0060EC71 83c414                 add esp, 0x14
+0x0060EC74 8be5                   mov esp, ebp
+0x0060EC76 5d                     pop ebp
+0x0060EC77 c3                     ret 
+0x0060EC78 e8370d0100             call 0x61f9b4
+0x0060EC7D 694818fd430300         imul ecx, dword ptr [eax + 0x18], 0x343fd
+0x0060EC84 81c1c39e2600           add ecx, 0x269ec3
+0x0060EC8A 894818                 mov dword ptr [eax + 0x18], ecx
+0x0060EC8D c1e910                 shr ecx, 0x10
+0x0060EC90 81e1ff7f0000           and ecx, 0x7fff
+0x0060EC96 8bc1                   mov eax, ecx
+0x0060EC98 c3                     ret 
+0x0060EC99 8bff                   mov edi, edi
+0x0060EC9B 55                     push ebp
+0x0060EC9C 8bec                   mov ebp, esp
+0x0060EC9E e8110d0100             call 0x61f9b4
+0x0060ECA3 8b4d08                 mov ecx, dword ptr [ebp + 8]
+0x0060ECA6 894818                 mov dword ptr [eax + 0x18], ecx
+0x0060ECA9 5d                     pop ebp
+0x0060ECAA c3                     ret 
+0x0060ECAB 6a10                   push 0x10
+0x0060ECAD 68006c6b00             push 0x6b6c00
+0x0060ECB2 e8d94effff             call 0x603b90
+0x0060ECB7 33c0                   xor eax, eax
+0x0060ECB9 8b7508                 mov esi, dword ptr [ebp + 8]
+0x0060ECBC 85f6                   test esi, esi
+0x0060ECBE 0f95c0                 setne al
+0x0060ECC1 85c0                   test eax, eax
+0x0060ECC3 75                     db 0x75
+
+--- 0x60edde ---
+0x0060EDDE 8bff                   mov edi, edi
+0x0060EDE0 55                     push ebp
+0x0060EDE1 8bec                   mov ebp, esp
+0x0060EDE3 83ec28                 sub esp, 0x28
+0x0060EDE6 a1c4bf6b00             mov eax, dword ptr [0x6bbfc4]
+0x0060EDEB 33c5                   xor eax, ebp
+0x0060EDED 8945fc                 mov dword ptr [ebp - 4], eax
+0x0060EDF0 8b4510                 mov eax, dword ptr [ebp + 0x10]
+0x0060EDF3 56                     push esi
+0x0060EDF4 8b7508                 mov esi, dword ptr [ebp + 8]
+0x0060EDF7 8945d8                 mov dword ptr [ebp - 0x28], eax
+0x0060EDFA 33c0                   xor eax, eax
+0x0060EDFC 57                     push edi
+0x0060EDFD 8b7d0c                 mov edi, dword ptr [ebp + 0xc]
+0x0060EE00 83f820                 cmp eax, 0x20
+0x0060EE03 0f83ae000000           jae 0x60eeb7
+0x0060EE09 c64405dc00             mov byte ptr [ebp + eax - 0x24], 0
+0x0060EE0E 40                     inc eax
+0x0060EE0F 83f820                 cmp eax, 0x20
+0x0060EE12 7cef                   jl 0x60ee03
+0x0060EE14 53                     push ebx
+0x0060EE15 8a1f                   mov bl, byte ptr [edi]
+0x0060EE17 0fb6d3                 movzx edx, bl
+0x0060EE1A 8bca                   mov ecx, edx
+0x0060EE1C 83e207                 and edx, 7
+0x0060EE1F c1e903                 shr ecx, 3
+0x0060EE22 0fb6440ddc             movzx eax, byte ptr [ebp + ecx - 0x24]
+0x0060EE27 0fabd0                 bts eax, edx
+0x0060EE2A 47                     inc edi
+0x0060EE2B 88440ddc               mov byte ptr [ebp + ecx - 0x24], al
+0x0060EE2F 84db                   test bl, bl
+0x0060EE31 75e2                   jne 0x60ee15
+0x0060EE33 85f6                   test esi, esi
+0x0060EE35 7505                   jne 0x60ee3c
+0x0060EE37 8b75d8                 mov esi, dword ptr [ebp - 0x28]
+0x0060EE3A 8b36                   mov esi, dword ptr [esi]
+0x0060EE3C 0fb616                 movzx edx, byte ptr [esi]
+0x0060EE3F 33c0                   xor eax, eax
+0x0060EE41 8bca                   mov ecx, edx
+0x0060EE43 40                     inc eax
+0x0060EE44 83e107                 and ecx, 7
+0x0060EE47 c1ea03                 shr edx, 3
+0x0060EE4A d3e0                   shl eax, cl
+0x0060EE4C 844415dc               test byte ptr [ebp + edx - 0x24], al
+0x0060EE50 741f                   je 0x60ee71
+0x0060EE52 8a1e                   mov bl, byte ptr [esi]
+0x0060EE54 84db                   test bl, bl
+0x0060EE56 7419                   je 0x60ee71
+0x0060EE58 46                     inc esi
+0x0060EE59 33c0                   xor eax, eax
+0x0060EE5B 40                     inc eax
+0x0060EE5C 8a1e                   mov bl, byte ptr [esi]
+0x0060EE5E 0fb6d3                 movzx edx, bl
+0x0060EE61 8bca                   mov ecx, edx
+0x0060EE63 c1ea03                 shr edx, 3
+0x0060EE66 83e107                 and ecx, 7
+0x0060EE69 d3e0                   shl eax, cl
+0x0060EE6B 844415dc               test byte ptr [ebp + edx - 0x24], al
+0x0060EE6F 75e3                   jne 0x60ee54
+0x0060EE71 8bfe                   mov edi, esi
+0x0060EE73 5b                     pop ebx
+0x0060EE74 eb17                   jmp 0x60ee8d
+0x0060EE76 0fb616                 movzx edx, byte ptr [esi]
+0x0060EE79 33c0                   xor eax, eax
+0x0060EE7B 8bca                   mov ecx, edx
+0x0060EE7D 40                     inc eax

@@ -1,0 +1,126 @@
+=== search backwards for prologue before 0x418400 ===
+0x00418340 off=0x017740 7302                   jae 0x418344
+0x00418342 off=0x017742 eb05                   jmp 0x418349
+0x00418344 off=0x017744 e8afaf1e00             call 0x6032f8
+0x00418349 off=0x017749 33c9                   xor ecx, ecx
+0x0041834B off=0x01774B 8b55a0                 mov edx, dword ptr [ebp - 0x60]
+0x0041834E off=0x01774E 66894c15bc             mov word ptr [ebp + edx - 0x44], cx
+0x00418353 off=0x017753 eb2e                   jmp 0x418383
+0x00418355 off=0x017755 8b450c                 mov eax, dword ptr [ebp + 0xc]
+0x00418358 off=0x017758 50                     push eax
+0x00418359 off=0x017759 68a4126800             push 0x6812a4
+0x0041835E off=0x01775E 8d4dbc                 lea ecx, [ebp - 0x44]
+0x00418361 off=0x017761 51                     push ecx
+0x00418362 off=0x017762 e849efffff             call 0x4172b0
+0x00418367 off=0x017767 83c40c                 add esp, 0xc
+0x0041836A off=0x01776A 0fb65518               movzx edx, byte ptr [ebp + 0x18]
+0x0041836E off=0x01776E 85d2                   test edx, edx
+0x00418370 off=0x017770 7411                   je 0x418383
+0x00418372 off=0x017772 68ac126800             push 0x6812ac
+0x00418377 off=0x017777 8d45bc                 lea eax, [ebp - 0x44]
+0x0041837A off=0x01777A 50                     push eax
+0x0041837B off=0x01777B e840780000             call 0x41fbc0
+0x00418380 off=0x017780 83c408                 add esp, 8
+0x00418383 off=0x017783 8d4dbc                 lea ecx, [ebp - 0x44]
+0x00418386 off=0x017786 51                     push ecx
+0x00418387 off=0x017787 8b5514                 mov edx, dword ptr [ebp + 0x14]
+0x0041838A off=0x01778A 52                     push edx
+0x0041838B off=0x01778B 8b4510                 mov eax, dword ptr [ebp + 0x10]
+0x0041838E off=0x01778E 50                     push eax
+0x0041838F off=0x01778F e8a3541f00             call 0x60d837
+0x00418394 off=0x017794 83c40c                 add esp, 0xc
+0x00418397 off=0x017797 8b4dfc                 mov ecx, dword ptr [ebp - 4]
+0x0041839A off=0x01779A 33cd                   xor ecx, ebp
+0x0041839C off=0x01779C e8f4ad1e00             call 0x603195
+0x004183A1 off=0x0177A1 8be5                   mov esp, ebp
+0x004183A3 off=0x0177A3 5d                     pop ebp
+0x004183A4 off=0x0177A4 c3                     ret 
+0x004183A5 off=0x0177A5 cc                     int3 
+0x004183A6 off=0x0177A6 cc                     int3 
+0x004183A7 off=0x0177A7 cc                     int3 
+0x004183A8 off=0x0177A8 cc                     int3 
+0x004183A9 off=0x0177A9 cc                     int3 
+0x004183AA off=0x0177AA cc                     int3 
+0x004183AB off=0x0177AB cc                     int3 
+0x004183AC off=0x0177AC cc                     int3 
+0x004183AD off=0x0177AD cc                     int3 
+0x004183AE off=0x0177AE cc                     int3 
+0x004183AF off=0x0177AF cc                     int3 
+0x004183B0 off=0x0177B0 55                     push ebp
+0x004183B1 off=0x0177B1 8bec                   mov ebp, esp
+0x004183B3 off=0x0177B3 81ec40010000           sub esp, 0x140
+0x004183B9 off=0x0177B9 a1c4bf6b00             mov eax, dword ptr [0x6bbfc4]
+0x004183BE off=0x0177BE 33c5                   xor eax, ebp
+0x004183C0 off=0x0177C0 8945fc                 mov dword ptr [ebp - 4], eax
+0x004183C3 off=0x0177C3 837d0c00               cmp dword ptr [ebp + 0xc], 0
+0x004183C7 off=0x0177C7 7406                   je 0x4183cf
+0x004183C9 off=0x0177C9 837d1000               cmp dword ptr [ebp + 0x10], 0
+0x004183CD off=0x0177CD 7505                   jne 0x4183d4
+0x004183CF off=0x0177CF e9c3080000             jmp 0x418c97
+0x004183D4 off=0x0177D4 e827640700             call 0x48e800
+0x004183D9 off=0x0177D9 8985c4feffff           mov dword ptr [ebp - 0x13c], eax
+0x004183DF off=0x0177DF 8b450c                 mov eax, dword ptr [ebp + 0xc]
+0x004183E2 off=0x0177E2 8b08                   mov ecx, dword ptr [eax]
+0x004183E4 off=0x0177E4 898df8feffff           mov dword ptr [ebp - 0x108], ecx
+0x004183EA off=0x0177EA 8b95f8feffff           mov edx, dword ptr [ebp - 0x108]
+0x004183F0 off=0x0177F0 83ea64                 sub edx, 0x64
+0x004183F3 off=0x0177F3 8995f8feffff           mov dword ptr [ebp - 0x108], edx
+0x004183F9 off=0x0177F9 83bdf8feffff20         cmp dword ptr [ebp - 0x108], 0x20
+
+=== 110 branch region: 0x4185B0..0x418650 ===
+0x004185B0 off=0x0179B0 008d8dfcfeff           add byte ptr [ebp - 0x10373], cl
+0x004185B6 off=0x0179B6 ff51e8                 call dword ptr [ecx - 0x18]
+0x004185B9 off=0x0179B9 335fff                 xor ebx, dword ptr [edi - 1]
+0x004185BC off=0x0179BC ff83c408e9bb           inc dword ptr [ebx - 0x4416f73c]
+0x004185C2 off=0x0179C2 06                     push es
+0x004185C3 off=0x0179C3 0000                   add byte ptr [eax], al
+0x004185C5 off=0x0179C5 8b550c                 mov edx, dword ptr [ebp + 0xc]
+0x004185C8 off=0x0179C8 8b4208                 mov eax, dword ptr [edx + 8]
+0x004185CB off=0x0179CB 50                     push eax
+0x004185CC off=0x0179CC 68c4146800             push 0x6814c4
+0x004185D1 off=0x0179D1 8d8dfcfeffff           lea ecx, [ebp - 0x104]
+0x004185D7 off=0x0179D7 51                     push ecx
+0x004185D8 off=0x0179D8 e8135fffff             call 0x40e4f0
+0x004185DD off=0x0179DD 83c40c                 add esp, 0xc
+0x004185E0 off=0x0179E0 e99b060000             jmp 0x418c80
+0x004185E5 off=0x0179E5 8b5508                 mov edx, dword ptr [ebp + 8]
+0x004185E8 off=0x0179E8 8b8294020000           mov eax, dword ptr [edx + 0x294]
+0x004185EE off=0x0179EE 83c001                 add eax, 1
+0x004185F1 off=0x0179F1 8985c8feffff           mov dword ptr [ebp - 0x138], eax
+0x004185F7 off=0x0179F7 8b4d08                 mov ecx, dword ptr [ebp + 8]
+0x004185FA off=0x0179FA 8b9178020000           mov edx, dword ptr [ecx + 0x278]
+0x00418600 off=0x017A00 52                     push edx
+0x00418601 off=0x017A01 8b85c8feffff           mov eax, dword ptr [ebp - 0x138]
+0x00418607 off=0x017A07 50                     push eax
+0x00418608 off=0x017A08 8b0d78886c00           mov ecx, dword ptr [0x6c8878]
+0x0041860E off=0x017A0E e82ddc0000             call 0x426240
+0x00418613 off=0x017A13 83c004                 add eax, 4
+0x00418616 off=0x017A16 50                     push eax
+0x00418617 off=0x017A17 8b4d0c                 mov ecx, dword ptr [ebp + 0xc]
+0x0041861A off=0x017A1A 8b5108                 mov edx, dword ptr [ecx + 8]
+0x0041861D off=0x017A1D 52                     push edx
+0x0041861E off=0x017A1E 68c4156800             push 0x6815c4
+0x00418623 off=0x017A23 8d85fcfeffff           lea eax, [ebp - 0x104]
+0x00418629 off=0x017A29 50                     push eax
+0x0041862A off=0x017A2A e8c15effff             call 0x40e4f0
+0x0041862F off=0x017A2F 83c414                 add esp, 0x14
+0x00418632 off=0x017A32 e949060000             jmp 0x418c80
+0x00418637 off=0x017A37 6828166800             push 0x681628
+0x0041863C off=0x017A3C 8d8dfcfeffff           lea ecx, [ebp - 0x104]
+0x00418642 off=0x017A42 51                     push ecx
+0x00418643 off=0x017A43 e8a85effff             call 0x40e4f0
+0x00418648 off=0x017A48 83c408                 add esp, 8
+0x0041864B off=0x017A4B e930060000             jmp 0x418c80
+
+=== strings ===
+  0x006814C4 : '服用后立即增加使用者的随机基础属性%d点。\r\n'
+  0x006815C4 : '服用后立即增加使用者%d点%s,最多可使用%d颗。\r\n'
+  0x00681380 : '使用后会立即重置当前出战宠物的属性，包括初始、成长、类型和技能，只有等级不变。\r\n'
+  0x00681400 : '使用后会立即重置当前出战宠物的成长和亲密，其他属性不变，有概率导致宠物变异，变异后等级变成1级。变异后再次服用固定增加0.01的成长。\r\n'
+  0x0068148C : '使用后会立即重置当前出战宠物类型，其他属性不变。\r\n'
+  0x00681520 : '使用后会立即重置当前出战宠物的属性，包括初始、成长、类型和技能，等级变成1级。\r\n'
+  0x006812B0 : '服用后修为增加%d点\r\n'
+  0x006812CC : '修炼技能时转换率提高%d%%\r\n'
+  0x006812F0 : '在突破练气期瓶颈进入筑基期时，提高%d%%成功率\r\n'
+  0x00681328 : '服用后境界点立即提高%d点\r\n'
+  0x00681348 : '%s\r\n'

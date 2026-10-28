@@ -1,0 +1,96 @@
+### 0x006812B0
+   raw/utf-16-le    '服用后修为增加%d点\r\n'
+   raw/utf-16-be    '൧⡵๔\uee4f㩎鹘ꁒ─搀륰ഀ\u0a00'
+   swap/utf-16-le   '൧⡵๔\uee4f㩎鹘ꁒ─搀륰ഀ\u0a00'
+   swap/utf-16-be   '服用后修为增加%d点\r\n'
+
+### 0x006812FC
+   raw/utf-16-le    '瓶颈进入筑基期时，提高%d%%成功率\r\n'
+   raw/utf-16-be    '\uf674袘�救养練ὧ\uf665\u0cff큣�─搀──ၢ齒蝳ഀ\u0a00'
+   swap/utf-16-le   '\uf674袘�救养練ὧ\uf665\u0cff큣�─搀──ၢ齒蝳ഀ\u0a00'
+   swap/utf-16-be   '瓶颈进入筑基期时，提高%d%%成功率\r\n'
+
+### 0x00681380
+   raw/utf-16-le    '使用后会立即重置当前出战宠物的属性，包括初始、成长、类型和技能，只有等级不变。\r\n'
+   raw/utf-16-be    '罏⡵๔ᩏ쭺獓춑湿卟䵒祝ᡢꁛ楲葶幜❠\u0cffՓ\uec62ᵒ쭙İၢ羕İ筼譗豔聢ﶀ\u0cff\uea53१䥻Ꝿൎ�Ȱഀ\u0a00'
+   swap/utf-16-le   '罏⡵๔ᩏ쭺獓춑湿卟䵒祝ᡢꁛ楲葶幜❠\u0cffՓ\uec62ᵒ쭙İၢ羕İ筼譗豔聢ﶀ\u0cff\uea53१䥻Ꝿൎ�Ȱഀ\u0a00'
+   swap/utf-16-be   '使用后会立即重置当前出战宠物的属性，包括初始、成长、类型和技能，只有等级不变。\r\n'
+
+### 0x00681400
+   raw/utf-16-le    '使用后会立即重置当前出战宠物的成长和亲密，其他属性不变，有概率导致宠物变异，变异后等级变成1级。变异后再次服用固定增加0'
+   raw/utf-16-be    '罏⡵๔ᩏ쭺獓춑湿卟䵒祝ᡢꁛ楲葶ၢ羕豔뉎왛\u0cff癑홎幜❠ൎ�\u0cff१艩蝳ﱛ\uf481ꁛ楲�ɟ\u0cff�ɟ๔䥻Ꝿ�ၢ\u3100ꝾȰ�ɟ๔赑Ⅻ൧⡵節驛鹘ꁒ\u3000'
+   swap/utf-16-le   '罏⡵๔ᩏ쭺獓춑湿卟䵒祝ᡢꁛ楲葶ၢ羕豔뉎왛\u0cff癑홎幜❠ൎ�\u0cff१艩蝳ﱛ\uf481ꁛ楲�ɟ\u0cff�ɟ๔䥻Ꝿ�ၢ\u3100ꝾȰ�ɟ๔赑Ⅻ൧⡵節驛鹘ꁒ\u3000'
+   swap/utf-16-be   '使用后会立即重置当前出战宠物的成长和亲密，其他属性不变，有概率导致宠物变异，变异后等级变成1级。变异后再次服用固定增加0'
+
+### 0x006814C4
+   raw/utf-16-le    '服用后立即增加使用者的随机基础属性%d点。\r\n'
+   raw/utf-16-be    '൧⡵๔쭺獓鹘ꁒ罏⡵ր葶辖㩧練䁸幜❠─搀륰Ȱഀ\u0a00'
+   swap/utf-16-le   '൧⡵๔쭺獓鹘ꁒ罏⡵ր葶辖㩧練䁸幜❠─搀륰Ȱഀ\u0a00'
+   swap/utf-16-be   '服用后立即增加使用者的随机基础属性%d点。\r\n'
+
+### 0x006815C4
+   raw/utf-16-le    '服用后立即增加使用者%d点%s,'
+   raw/utf-16-be    '൧⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰─猀Ⰰ'
+   swap/utf-16-le   '൧⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰─猀Ⰰ'
+   swap/utf-16-be   '服用后立即增加使用者%d点%s,'
+
+### 0x006816FC
+   raw/utf-16-le    '使用后立即增加使用者%d年寿元,服用过多后将无效\r\n'
+   raw/utf-16-be    '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀瑞｛䍑Ⰰ൧⡵잏ᩙ๔ٜ\ue065䡥ഀ\u0a00'
+   swap/utf-16-le   '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀瑞｛䍑Ⰰ൧⡵잏ᩙ๔ٜ\ue065䡥ഀ\u0a00'
+   swap/utf-16-be   '使用后立即增加使用者%d年寿元,服用过多后将无效\r\n'
+
+### 0x00681734
+   raw/utf-16-le    '使用后立即增加使用者%d点修炼点,服用过多后将无效\r\n'
+   raw/utf-16-be    '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰\uee4f뱰륰Ⰰ൧⡵잏ᩙ๔ٜ\ue065䡥ഀ\u0a00'
+   swap/utf-16-le   '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰\uee4f뱰륰Ⰰ൧⡵잏ᩙ๔ٜ\ue065䡥ഀ\u0a00'
+   swap/utf-16-be   '使用后立即增加使用者%d点修炼点,服用过多后将无效\r\n'
+
+### 0x0068176C
+   raw/utf-16-le    '使用后立即增加使用者%d点修为。\r\n'
+   raw/utf-16-be    '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰\uee4f㩎Ȱഀ\u0a00'
+   swap/utf-16-le   '罏⡵๔쭺獓鹘ꁒ罏⡵ր─搀륰\uee4f㩎Ȱഀ\u0a00'
+   swap/utf-16-be   '使用后立即增加使用者%d点修为。\r\n'
+
+### callers of 0x4183B0 ###
+  site 0x004547BC off=0x053BBC
+     0x0045477C ff                     db 0xFF
+     0x0045477D ff518b                 call dword ptr [ecx - 0x75]
+     0x00454780 95                     xchg ebp, eax
+     0x00454781 0cec                   or al, 0xec
+     0x00454783 ff                     db 0xFF
+     0x00454784 ff52e8                 call dword ptr [edx - 0x18]
+     0x00454787 8535fcff83c4           test dword ptr [0xc483fffc], esi
+     0x0045478D 10e9                   adc cl, ch
+     0x0045478F 7901                   jns 0x454792
+     0x00454791 0000                   add byte ptr [eax], al
+     0x00454793 8b8510ecffff           mov eax, dword ptr [ebp - 0x13f0]
+     0x00454799 83b88c02000001         cmp dword ptr [eax + 0x28c], 1
+     0x004547A0 7527                   jne 0x4547c9
+     0x004547A2 6880000000             push 0x80
+     0x004547A7 8d8d3cf7ffff           lea ecx, [ebp - 0x8c4]
+     0x004547AD 51                     push ecx
+     0x004547AE 8b950cecffff           mov edx, dword ptr [ebp - 0x13f4]
+     0x004547B4 52                     push edx
+     0x004547B5 8b8510ecffff           mov eax, dword ptr [ebp - 0x13f0]
+     0x004547BB 50                     push eax
+
+  site 0x00476AEB off=0x075EEB
+     0x00476AAB 89857490feff           mov dword ptr [ebp - 0x16f8c], eax
+     0x00476AB1 83bd7490feff00         cmp dword ptr [ebp - 0x16f8c], 0
+     0x00476AB8 7560                   jne 0x476b1a
+     0x00476ABA 8b8d0491feff           mov ecx, dword ptr [ebp - 0x16efc]
+     0x00476AC0 8b89d4070000           mov ecx, dword ptr [ecx + 0x7d4]
+     0x00476AC6 e8052d0300             call 0x4a97d0
+     0x00476ACB 83f801                 cmp eax, 1
+     0x00476ACE 7e4a                   jle 0x476b1a
+     0x00476AD0 6800040000             push 0x400
+     0x00476AD5 8d9550f5ffff           lea edx, [ebp - 0xab0]
+     0x00476ADB 52                     push edx
+     0x00476ADC 6a6b                   push 0x6b
+     0x00476ADE 8b4d08                 mov ecx, dword ptr [ebp + 8]
+     0x00476AE1 e80a2cfcff             call 0x4396f0
+     0x00476AE6 50                     push eax
+     0x00476AE7 8b4508                 mov eax, dword ptr [ebp + 8]
+     0x00476AEA 50                     push eax
+

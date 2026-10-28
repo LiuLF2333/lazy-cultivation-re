@@ -1,0 +1,42 @@
+# ---- 游戏本体 / 可执行文件（受版权保护，用脚本从原版重建，不入库）----
+*.exe
+*.dll
+*.bak
+*.bak.*
+*.orig
+steam_appid.txt
+valve.ini
+
+# ---- 游戏资源与数据（体积大、可重新解包）----
+data/
+Res/
+Mods/
+Profile/
+Save/
+config.ini
+wild.ini
+sdkencryptedappticket.dll
+5DMCITY.dll
+
+# ---- 运行时产物 ----
+Dump_*.dmp
+GameLog.txt
+
+# ---- 逆向过程中生成的中间产物 ----
+__pycache__/
+*.pyc
+_analysis/backup/
+_analysis/re/out/
+_analysis/reports/
+_analysis/**/*.log
+_analysis/probe_gdi.csv
+_analysis/probe_gdi2.csv
+_analysis/probe_counters.csv
+_analysis/*.csv
+_analysis/_patch.txt
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

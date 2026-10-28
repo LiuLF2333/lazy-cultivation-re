@@ -1,0 +1,14 @@
+# 默认按文本处理并统一为 LF（仓库内）
+* text=auto eol=lf
+
+# 源码与文档
+*.py    text eol=lf
+*.md    text eol=lf
+*.ps1   text eol=crlf
+*.json  text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+
+# 反汇编/字符串导出：由 PowerShell 重定向生成，实际编码为 UTF-16LE，
+# 声明为二进制以免 git 逐行比对时产生噪声diff。
+*.txt   -text -diff

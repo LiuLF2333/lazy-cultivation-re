@@ -47,7 +47,8 @@ sys.path.insert(0, r"D:\XiuXian\_analysis")
 from petool import PE
 from keystone import Ks, KS_ARCH_X86, KS_MODE_32
 
-SRC = r"D:\XiuXian\懒人修仙传.exe"
+DEFAULT_SRC = r"D:\XiuXian\懒人修仙传.exe"
+SRC = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_SRC
 OUT = sys.argv[1] if len(sys.argv) > 1 else r"D:\XiuXian\懒人修仙传.speed.exe"
 
 WAIT_VA = 0x48AB42          # 7E 33            jle 0x48AB77 (wait branch)

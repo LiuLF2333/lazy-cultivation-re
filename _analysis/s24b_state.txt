@@ -1,0 +1,47 @@
+﻿0x00490E0B  8945f8             mov     dword ptr [ebp - 8], eax
+0x00490E0E  8b4df8             mov     ecx, dword ptr [ebp - 8]
+0x00490E11  8b11               mov     edx, dword ptr [ecx]
+0x00490E13  8b4df8             mov     ecx, dword ptr [ebp - 8]
+0x00490E16  8b4218             mov     eax, dword ptr [edx + 0x18]
+0x00490E19  ffd0               call    eax
+0x00490E1B  eb14               jmp     0x490e31
+0x00490E1D  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x00490E20  83b9a005000004     cmp     dword ptr [ecx + 0x5a0], 4
+0x00490E27  7508               jne     0x490e31
+0x00490E29  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x00490E2C  e80f000000         call    0x490e40
+0x00490E31  8be5               mov     esp, ebp
+0x00490E33  5d                 pop     ebp
+0x00490E34  c3                 ret     
+0x00490E35  cc                 int3    
+0x00490E36  cc                 int3    
+0x00490E37  cc                 int3    
+0x00490E38  cc                 int3    
+0x00490E39  cc                 int3    
+0x00490E3A  cc                 int3    
+0x00490E3B  cc                 int3    
+0x00490E3C  cc                 int3    
+0x00490E3D  cc                 int3    
+0x00490E3E  cc                 int3    
+0x00490E3F  cc                 int3    
+0x00490E40  55                 push    ebp
+0x00490E41  8bec               mov     ebp, esp
+0x00490E43  51                 push    ecx
+0x00490E44  894dfc             mov     dword ptr [ebp - 4], ecx
+0x00490E47  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x00490E4A  8b886c050000       mov     ecx, dword ptr [eax + 0x56c]
+0x00490E50  51                 push    ecx
+0x00490E51  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x00490E54  e897b2ffff         call    0x48c0f0
+0x00490E59  8be5               mov     esp, ebp
+0x00490E5B  5d                 pop     ebp
+0x00490E5C  c3                 ret     
+0x00490E5D  cc                 int3    
+0x00490E5E  cc                 int3    
+0x00490E5F  cc                 int3    
+0x00490E60  55                 push    ebp
+0x00490E61  8bec               mov     ebp, esp
+0x00490E63  83ec18             sub     esp, 0x18
+0x00490E66  894df4             mov     dword ptr [ebp - 0xc], ecx
+0x00490E69  c7                 db      0xC7
+0x00490E6A  45                 inc     ebp

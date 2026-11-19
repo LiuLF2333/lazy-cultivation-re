@@ -1,0 +1,36 @@
+﻿--- 0x490DA0 state dispatch ---
+0x00490DA0  55                 push    ebp
+0x00490DA1  8bec               mov     ebp, esp
+0x00490DA3  83ec08             sub     esp, 8
+0x00490DA6  894dfc             mov     dword ptr [ebp - 4], ecx
+0x00490DA9  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x00490DAC  83b8a005000003     cmp     dword ptr [eax + 0x5a0], 3
+0x00490DB3  7568               jne     0x490e1d
+0x00490DB5  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x00490DB8  83790400           cmp     dword ptr [ecx + 4], 0
+0x00490DBC  7431               je      0x490def
+0x00490DBE  0fb615e1d36b00     movzx   edx, byte ptr [0x6bd3e1]
+0x00490DC5  85d2               test    edx, edx
+0x00490DC7  7426               je      0x490def
+0x00490DC9  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x00490DCC  8b4804             mov     ecx, dword ptr [eax + 4]
+0x00490DCF  8b55fc             mov     edx, dword ptr [ebp - 4]
+0x00490DD2  8b01               mov     eax, dword ptr [ecx]
+0x00490DD4  8b4a04             mov     ecx, dword ptr [edx + 4]
+0x00490DD7  8b5018             mov     edx, dword ptr [eax + 0x18]
+0x00490DDA  ffd2               call    edx
+0x00490DDC  6a00               push    0
+0x00490DDE  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x00490DE1  8b4804             mov     ecx, dword ptr [eax + 4]
+0x00490DE4  51                 push    ecx
+0x00490DE5  6a34               push    0x34
+0x00490DE7  e8a461f8ff         call    0x416f90
+0x00490DEC  83c40c             add     esp, 0xc
+0x00490DEF  8b55fc             mov     edx, dword ptr [ebp - 4]
+0x00490DF2  c7420400000000     mov     dword ptr [edx + 4], 0
+0x00490DF9  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x00490DFC  c780a005000000000000 mov     dword ptr [eax + 0x5a0], 0
+0x00490E06  e8f5d9ffff         call    0x48e800
+0x00490E0B  8945f8             mov     dword ptr [ebp - 8], eax
+0x00490E0E  8b                 db      0x8B
+0x00490E0F  4d                 dec     ebp

@@ -1,0 +1,38 @@
+exe: D:\XiuXian\懒人修仙传.exe
+
+===== writes to [x + 0x4c] =====
+total 0
+
+===== 0x48C6E0..0x48C760 =====
+0x0048C6E0  6804040000             push      0x404
+0x0048C6E5  e8a6b0f8ff             call      0x417790
+0x0048C6EA  8bc8                   mov       ecx, eax
+0x0048C6EC  e8ffdbf7ff             call      0x40a2f0
+0x0048C6F1  50                     push      eax
+0x0048C6F2  ff15f4566400           call      dword ptr [0x6456f4]
+0x0048C6F8  e9bd040000             jmp       0x48cbba
+0x0048C6FD  8b85acd7ffff           mov       eax, dword ptr [ebp - 0x2854]
+0x0048C703  83784c02               cmp       dword ptr [eax + 0x4c], 2
+0x0048C707  0f857d010000           jne       0x48c88a
+0x0048C70D  8b8dacd7ffff           mov       ecx, dword ptr [ebp - 0x2854]
+0x0048C713  8b9170050000           mov       edx, dword ptr [ecx + 0x570]
+0x0048C719  8b85acd7ffff           mov       eax, dword ptr [ebp - 0x2854]
+0x0048C71F  8b4a24                 mov       ecx, dword ptr [edx + 0x24]
+0x0048C722  8988b0050000           mov       dword ptr [eax + 0x5b0], ecx
+0x0048C728  8b95acd7ffff           mov       edx, dword ptr [ebp - 0x2854]
+0x0048C72E  c7825405000000000000   mov       dword ptr [edx + 0x554], 0
+0x0048C738  6800050000             push      0x500
+0x0048C73D  6a00                   push      0
+0x0048C73F  8b85acd7ffff           mov       eax, dword ptr [ebp - 0x2854]
+0x0048C745  83c052                 add       eax, 0x52
+0x0048C748  50                     push      eax
+0x0048C749  e832a01700             call      0x606780
+0x0048C74E  83c40c                 add       esp, 0xc
+0x0048C751  8b0d9cb46800           mov       ecx, dword ptr [0x68b49c]
+0x0048C757  894dd0                 mov       dword ptr [ebp - 0x30], ecx
+0x0048C75A  33d2                   xor       edx, edx
+0x0048C75C  8955d4                 mov       dword ptr [ebp - 0x2c], edx
+0x0048C75F  8955d8                 mov       dword ptr [ebp - 0x28], edx
+0x0048C762  8955dc                 mov       dword ptr [ebp - 0x24], edx
+0x0048C765  c78594d7ffff00000000   mov       dword ptr [ebp - 0x286c], 0
+0x0048C76F  c7                     db        0xC7

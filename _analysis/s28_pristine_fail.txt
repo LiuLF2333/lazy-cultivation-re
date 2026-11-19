@@ -1,0 +1,32 @@
+﻿pristine: D:\XiuXian\�������ɴ�.exe.bak.20261119-184543-716955
+bytes 0x48FE40..0x48FE60: 6a 00 8b 4d fc 8b 09 e8 c4 2a fe ff e9 ba 00 00 00 8b 55 fc 83 7a 44 03 0f 85 91 00 00 00 6a 00
+
+0x0048FE20  008b4df8f30f         add     byte ptr [ebx + 0xff3f84d], cl
+0x0048FE26  114108               adc     dword ptr [ecx + 8], eax
+0x0048FE29  8b55f8               mov     edx, dword ptr [ebp - 8]
+0x0048FE2C  0f57c0               xorps   xmm0, xmm0
+0x0048FE2F  0f2f4208             comiss  xmm0, dword ptr [edx + 8]
+0x0048FE33  760b                 jbe     0x48fe40
+0x0048FE35  8b45f8               mov     eax, dword ptr [ebp - 8]
+0x0048FE38  0f57c0               xorps   xmm0, xmm0
+0x0048FE3B  f30f114008           movss   dword ptr [eax + 8], xmm0
+0x0048FE40  6a00                 push    0
+0x0048FE42  8b4dfc               mov     ecx, dword ptr [ebp - 4]
+0x0048FE45  8b09                 mov     ecx, dword ptr [ecx]
+0x0048FE47  e8c42afeff           call    0x472910
+0x0048FE4C  e9ba000000           jmp     0x48ff0b
+0x0048FE51  8b55fc               mov     edx, dword ptr [ebp - 4]
+0x0048FE54  837a4403             cmp     dword ptr [edx + 0x44], 3
+0x0048FE58  0f8591000000         jne     0x48feef
+0x0048FE5E  6a00                 push    0
+0x0048FE60  8b45fc               mov     eax, dword ptr [ebp - 4]
+0x0048FE63  8b4804               mov     ecx, dword ptr [eax + 4]
+0x0048FE66  51                   push    ecx
+0x0048FE67  6a33                 push    0x33
+0x0048FE69  e82271f8ff           call    0x416f90
+0x0048FE6E  83c40c               add     esp, 0xc
+0x0048FE71  8b4dfc               mov     ecx, dword ptr [ebp - 4]
+0x0048FE74  e8b70b0000           call    0x490a30
+0x0048FE79  0fb6d0               movzx   edx, al
+0x0048FE7C  85d2                 test    edx, edx
+0x0048FE7E  746d                 je      0x48feed

@@ -1,0 +1,64 @@
+﻿tick site: speed-up cave at 0x00703E18 (chained)
+defeat site 0x0048FE4C chains to 0x00701B80
+burst cave tail 0x00703E66: stack-neutral ret
+.washd: vsize 0x1000 rawsize 0x1000 chars 0xE0000020
+SizeOfImage 0x305000
+
+=== Hook A  defeat marker @ 0x00704200 (55 bytes) ===
+0x00704200  60                     pushal  
+0x00704201  8b75fc                 mov     esi, dword ptr [ebp - 4]
+0x00704204  85f6                   test    esi, esi
+0x00704206  7429                   je      0x704231
+0x00704208  83be6c05000000         cmp     dword ptr [esi + 0x56c], 0
+0x0070420F  7420                   je      0x704231
+0x00704211  e800000000             call    0x704216
+0x00704216  5f                     pop     edi
+0x00704217  81ef16423000           sub     edi, 0x304216
+0x0070421D  c787004f300001000000   mov     dword ptr [edi + 0x304f00], 1
+0x00704227  c787044f300000000000   mov     dword ptr [edi + 0x304f04], 0
+0x00704231  61                     popal   
+0x00704232  e949d9ffff             jmp     0x701b80
+
+=== Hook B  tick watchdog @ 0x00704280 (170 bytes) ===
+0x00704280  60                     pushal  
+0x00704281  8b45fc                 mov     eax, dword ptr [ebp - 4]
+0x00704284  85c0                   test    eax, eax
+0x00704286  747b                   je      0x704303
+0x00704288  8bb0f4240000           mov     esi, dword ptr [eax + 0x24f4]
+0x0070428E  85f6                   test    esi, esi
+0x00704290  7471                   je      0x704303
+0x00704292  e800000000             call    0x704297
+0x00704297  5f                     pop     edi
+0x00704298  81ef97423000           sub     edi, 0x304297
+0x0070429E  83bf044f300000         cmp     dword ptr [edi + 0x304f04], 0
+0x007042A5  7408                   je      0x7042af
+0x007042A7  ff8f044f3000           dec     dword ptr [edi + 0x304f04]
+0x007042AD  eb54                   jmp     0x704303
+0x007042AF  83bf004f300000         cmp     dword ptr [edi + 0x304f00], 0
+0x007042B6  744b                   je      0x704303
+0x007042B8  83be6c05000000         cmp     dword ptr [esi + 0x56c], 0
+0x007042BF  7442                   je      0x704303
+0x007042C1  c787004f300000000000   mov     dword ptr [edi + 0x304f00], 0
+0x007042CB  c787044f30000f000000   mov     dword ptr [edi + 0x304f04], 0xf
+0x007042D5  c786a005000000000000   mov     dword ptr [esi + 0x5a0], 0
+0x007042DF  c786b805000000000000   mov     dword ptr [esi + 0x5b8], 0
+0x007042E9  c7460400000000         mov     dword ptr [esi + 4], 0
+0x007042F0  c780fc24000000000000   mov     dword ptr [eax + 0x24fc], 0
+0x007042FA  89f1                   mov     ecx, esi
+0x007042FC  e83fcbd8ff             call    0x490e40
+0x00704301  eb18                   jmp     0x70431b
+0x00704303  61                     popal   
+0x00704304  e800000000             call    0x704309
+0x00704309  58                     pop     eax
+0x0070430A  81e809433000           sub     eax, 0x304309
+0x00704310  056b5d0c00             add     eax, 0xc5d6b
+0x00704315  50                     push    eax
+0x00704316  e9fdfaffff             jmp     0x703e18
+0x0070431B  61                     popal   
+0x0070431C  8b4dfc                 mov     ecx, dword ptr [ebp - 4]
+0x0070431F  8b91f0240000           mov     edx, dword ptr [ecx + 0x24f0]
+0x00704325  e9451adcff             jmp     0x4c5d6f
+
+output: D:\XiuXian\�������ɴ�.final.exe
+size  : 3109376
+sha256: 563b70fbc4cc9dc657b292e2de753b4f2c07de5b84f96e45a196cc90b9d61185

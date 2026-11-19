@@ -1,0 +1,113 @@
+exe: D:\XiuXian\懒人修仙传.exe
+
+===== callers of 0x48C0F0 =====
+0x00470FD3  call 0x48C0F0
+0x00490E54  call 0x48C0F0
+0x004BD7F6  call 0x48C0F0
+0x004C8972  call 0x48C0F0
+0x004C89D2  call 0x48C0F0
+0x004C8A84  call 0x48C0F0
+0x004C8AFF  call 0x48C0F0
+0x004C8B85  call 0x48C0F0
+0x004C8C1F  call 0x48C0F0
+
+===== 0x491040 (idle nudge) =====
+0x00491040  55                     push      ebp
+0x00491041  8bec                   mov       ebp, esp
+0x00491043  83ec08                 sub       esp, 8
+0x00491046  894dfc                 mov       dword ptr [ebp - 4], ecx
+0x00491049  8b45fc                 mov       eax, dword ptr [ebp - 4]
+0x0049104C  8b08                   mov       ecx, dword ptr [eax]
+0x0049104E  e80dc9feff             call      0x47d960
+0x00491053  d95df8                 fstp      dword ptr [ebp - 8]
+0x00491056  f30f1045f8             movss     xmm0, dword ptr [ebp - 8]
+0x0049105B  0f2f05cc7a6900         comiss    xmm0, dword ptr [0x697acc]
+0x00491062  722f                   jb        0x491093
+0x00491064  8b4dfc                 mov       ecx, dword ptr [ebp - 4]
+0x00491067  8b11                   mov       edx, dword ptr [ecx]
+0x00491069  83ba6408000000         cmp       dword ptr [edx + 0x864], 0
+0x00491070  7e0b                   jle       0x49107d
+0x00491072  0fb605f9866c00         movzx     eax, byte ptr [0x6c86f9]
+0x00491079  85c0                   test      eax, eax
+0x0049107B  7416                   je        0x491093
+0x0049107D  8b4dfc                 mov       ecx, dword ptr [ebp - 4]
+0x00491080  8b11                   mov       edx, dword ptr [ecx]
+0x00491082  c78264080000b80b0000   mov       dword ptr [edx + 0x864], 0xbb8
+0x0049108C  8b45fc                 mov       eax, dword ptr [ebp - 4]
+0x0049108F  c6405001               mov       byte ptr [eax + 0x50], 1
+0x00491093  8be5                   mov       esp, ebp
+0x00491095  5d                     pop       ebp
+0x00491096  c3                     ret       
+0x00491097  cc                     int3      
+0x00491098  cc                     int3      
+0x00491099  cc                     int3      
+0x0049109A  cc                     int3      
+0x0049109B  cc                     int3      
+0x0049109C  cc                     int3      
+0x0049109D  cc                     int3      
+0x0049109E  cc                     int3      
+0x0049109F  cc                     int3      
+0x004910A0  55                     push      ebp
+0x004910A1  8bec                   mov       ebp, esp
+0x004910A3  b834100000             mov       eax, 0x1034
+0x004910A8  e8a32b1700             call      0x603c50
+0x004910AD  a1c4bf6b00             mov       eax, dword ptr [0x6bbfc4]
+0x004910B2  33c5                   xor       eax, ebp
+0x004910B4  8945fc                 mov       dword ptr [ebp - 4], eax
+0x004910B7  898df8efffff           mov       dword ptr [ebp - 0x1008], ecx
+0x004910BD  8b85f8efffff           mov       eax, dword ptr [ebp - 0x1008]
+0x004910C3  8b8870050000           mov       ecx, dword ptr [eax + 0x570]
+0x004910C9  81c148050000           add       ecx, 0x548
+0x004910CF  e8bceaf8ff             call      0x41fb90
+0x004910D4  83f801                 cmp       eax, 1
+0x004910D7  7307                   jae       0x4910e0
+0x004910D9  32c0                   xor       al, al
+0x004910DB  e993040000             jmp       0x491573
+0x004910E0  c685f7efffff00         mov       byte ptr [ebp - 0x1009], 0
+0x004910E7  c785ecefffff00000000   mov       dword ptr [ebp - 0x1014], 0
+0x004910F1  eb0f                   jmp       0x491102
+0x004910F3  8b8decefffff           mov       ecx, dword ptr [ebp - 0x1014]
+0x004910F9  83c101                 add       ecx, 1
+0x004910FC  898decefffff           mov       dword ptr [ebp - 0x1014], ecx
+0x00491102  8b95f8efffff           mov       edx, dword ptr [ebp - 0x1008]
+0x00491108  8b8a70050000           mov       ecx, dword ptr [edx + 0x570]
+0x0049110E  81c148050000           add       ecx, 0x548
+0x00491114  e877eaf8ff             call      0x41fb90
+0x00491119  3985ecefffff           cmp       dword ptr [ebp - 0x1014], eax
+0x0049111F  0f8348040000           jae       0x49156d
+0x00491125  8b85ecefffff           mov       eax, dword ptr [ebp - 0x1014]
+0x0049112B  50                     push      eax
+0x0049112C  8b8df8efffff           mov       ecx, dword ptr [ebp - 0x1008]
+0x00491132  8b8970050000           mov       ecx, dword ptr [ecx + 0x570]
+0x00491138  81c148050000           add       ecx, 0x548
+0x0049113E  e82deaf8ff             call      0x41fb70
+0x00491143  8b10                   mov       edx, dword ptr [eax]
+0x00491145  52                     push      edx
+0x00491146  8b0d78886c00           mov       ecx, dword ptr [0x6c8878]
+0x0049114C  e8df48f9ff             call      0x425a30
+0x00491151  8985d0efffff           mov       dword ptr [ebp - 0x1030], eax
+0x00491157  83bdd0efffff00         cmp       dword ptr [ebp - 0x1030], 0
+0x0049115E  0f                     db        0x0F
+0x0049115F  84                     db        0x84
+
+===== accesses to [x+0x50] / [x+0x599] in 0x48A000-0x492000 =====
+0x0048A89F  c6425000               mov       byte ptr [edx + 0x50], 0
+0x0048B812  3b4150                 cmp       eax, dword ptr [ecx + 0x50]
+0x0048CAA3  83795000               cmp       dword ptr [ecx + 0x50], 0
+0x0048CAC0  8b4950                 mov       ecx, dword ptr [ecx + 0x50]
+0x0048CAF1  8b4250                 mov       eax, dword ptr [edx + 0x50]
+0x0048CB35  c7405000000000         mov       dword ptr [eax + 0x50], 0
+0x0048D493  c6819905000000         mov       byte ptr [ecx + 0x599], 0
+0x0048ED4B  8b4250                 mov       eax, dword ptr [edx + 0x50]
+0x0048EEA4  0fb64250               movzx     eax, byte ptr [edx + 0x50]
+0x0048EEC3  c6415000               mov       byte ptr [ecx + 0x50], 0
+0x0048F2B3  0fb64250               movzx     eax, byte ptr [edx + 0x50]
+0x0048F2EB  c6405000               mov       byte ptr [eax + 0x50], 0
+0x0048FE0C  3b5050                 cmp       edx, dword ptr [eax + 0x50]
+0x00490207  8b4250                 mov       eax, dword ptr [edx + 0x50]
+0x00490795  0fb65150               movzx     edx, byte ptr [ecx + 0x50]
+0x004909EB  c6819905000000         mov       byte ptr [ecx + 0x599], 0
+0x0049108F  c6405001               mov       byte ptr [eax + 0x50], 1
+
+===== accesses to [x+0x50] / [x+0x599] in 0x4C5C00-0x4C6700 =====
+0x004C5F3C  0fb69199050000         movzx     edx, byte ptr [ecx + 0x599]

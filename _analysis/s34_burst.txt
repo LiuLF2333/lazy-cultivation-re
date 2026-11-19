@@ -1,0 +1,36 @@
+0x00703E18  53                   push    ebx
+0x00703E19  56                   push    esi
+0x00703E1A  57                   push    edi
+0x00703E1B  8b7c240c             mov     edi, dword ptr [esp + 0xc]
+0x00703E1F  81c785e12300         add     edi, 0x23e185
+0x00703E25  c70701000000         mov     dword ptr [edi], 1
+0x00703E2B  0f31                 rdtsc   
+0x00703E2D  89c3                 mov     ebx, eax
+0x00703E2F  be3c000000           mov     esi, 0x3c
+0x00703E34  8b45fc               mov     eax, dword ptr [ebp - 4]
+0x00703E37  8b88f4240000         mov     ecx, dword ptr [eax + 0x24f4]
+0x00703E3D  85c9                 test    ecx, ecx
+0x00703E3F  7413                 je      0x703e54
+0x00703E41  e86a6cd8ff           call    0x48aab0
+0x00703E46  0f31                 rdtsc   
+0x00703E48  29d8                 sub     eax, ebx
+0x00703E4A  3d40a5ae02           cmp     eax, 0x2aea540
+0x00703E4F  7303                 jae     0x703e54
+0x00703E51  4e                   dec     esi
+0x00703E52  75e0                 jne     0x703e34
+0x00703E54  c70700000000         mov     dword ptr [edi], 0
+0x00703E5A  5f                   pop     edi
+0x00703E5B  5e                   pop     esi
+0x00703E5C  5b                   pop     ebx
+0x00703E5D  8b4dfc               mov     ecx, dword ptr [ebp - 4]
+0x00703E60  8b91f0240000         mov     edx, dword ptr [ecx + 0x24f0]
+0x00703E66  c3                   ret     
+0x00703E67  90                   nop     
+0x00703E68  90                   nop     
+0x00703E69  90                   nop     
+0x00703E6A  90                   nop     
+0x00703E6B  8b1424               mov     edx, dword ptr [esp]
+0x00703E6E  81c241e22300         add     edx, 0x23e241
+0x00703E74  8b0a                 mov     ecx, dword ptr [edx]
+0x00703E76  83                   db      0x83
+0x00703E77  f9                   stc     

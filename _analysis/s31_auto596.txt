@@ -1,0 +1,26 @@
+﻿--- 0x48FEE0 ---
+0x0048FEE0  8b55fc             mov     edx, dword ptr [ebp - 4]
+0x0048FEE3  c782b80500001e000000 mov     dword ptr [edx + 0x5b8], 0x1e
+0x0048FEED  eb1c               jmp     0x48ff0b
+0x0048FEEF  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x0048FEF2  83784404           cmp     dword ptr [eax + 0x44], 4
+0x0048FEF6  7513               jne     0x48ff0b
+0x0048FEF8  6a00               push    0
+0x0048FEFA  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x0048FEFD  8b5104             mov     edx, dword ptr [ecx + 4]
+0x0048FF00  52                 push    edx
+0x0048FF01  6a35               push    0x35
+0x0048FF03  e88870f8ff         call    0x416f90
+0x0048FF08  83c40c             add     esp, 0xc
+0x0048FF0B  6a00               push    0
+0x0048FF0D  6a00               push    0
+0x0048FF0F  6a                 db      0x6A
+
+--- writes/reads of +0x596 in .text ---
+0x0040BAA4  fc                       cld    
+0x00482C7C  b688                     mov    dh, 0x88
+0x004854DE  888296050000             mov    byte ptr [edx + 0x596], al
+0x004856DE  c6819605000001           mov    byte ptr [ecx + 0x596], 1
+0x004909AF  c6819605000000           mov    byte ptr [ecx + 0x596], 0
+0x00490D3A  b688                     mov    dh, 0x88
+0x005145F2  ce                       into   

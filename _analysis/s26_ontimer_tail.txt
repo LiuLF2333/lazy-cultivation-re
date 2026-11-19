@@ -1,0 +1,56 @@
+﻿--- 0x4C65E0 tail of OnTimer ---
+0x004C65E0  90                 nop     
+0x004C65E1  0800               or      byte ptr [eax], al
+0x004C65E3  008b55fc81ba       add     byte ptr [ebx - 0x457e03ab], cl
+0x004C65E9  90                 nop     
+0x004C65EA  0800               or      byte ptr [eax], al
+0x004C65EC  0010               add     byte ptr [eax], dl
+0x004C65EE  27                 daa     
+0x004C65EF  0000               add     byte ptr [eax], al
+0x004C65F1  7e0d               jle     0x4c6600
+0x004C65F3  8b45fc             mov     eax, dword ptr [ebp - 4]
+0x004C65F6  c7809008000000000000 mov     dword ptr [eax + 0x890], 0
+0x004C6600  eb08               jmp     0x4c660a
+0x004C6602  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x004C6605  e886bcffff         call    0x4c2290
+0x004C660A  8b4d08             mov     ecx, dword ptr [ebp + 8]
+0x004C660D  51                 push    ecx
+0x004C660E  8b4dfc             mov     ecx, dword ptr [ebp - 4]
+0x004C6611  e8ea8ef4ff         call    0x40f500
+0x004C6616  5e                 pop     esi
+0x004C6617  8be5               mov     esp, ebp
+0x004C6619  5d                 pop     ebp
+0x004C661A  c20400             ret     4
+0x004C661D  0f1f00             nop     dword ptr [eax]
+
+--- 0x4C5FF0..0x4C6070 ---
+0x004C5FF0  8d4ddc             lea     ecx, [ebp - 0x24]
+0x004C5FF3  e8d8b0f6ff         call    0x4310d0
+0x004C5FF8  8d4dc8             lea     ecx, [ebp - 0x38]
+0x004C5FFB  51                 push    ecx
+0x004C5FFC  e8ff87fcff         call    0x48e800
+0x004C6001  0558080000         add     eax, 0x858
+0x004C6006  8bc8               mov     ecx, eax
+0x004C6008  e84326f4ff         call    0x408650
+0x004C600D  8b10               mov     edx, dword ptr [eax]
+0x004C600F  8955dc             mov     dword ptr [ebp - 0x24], edx
+0x004C6012  8d45c4             lea     eax, [ebp - 0x3c]
+0x004C6015  50                 push    eax
+0x004C6016  e8e587fcff         call    0x48e800
+0x004C601B  0558080000         add     eax, 0x858
+0x004C6020  8bc8               mov     ecx, eax
+0x004C6022  e8c925f4ff         call    0x4085f0
+0x004C6027  50                 push    eax
+0x004C6028  8d4ddc             lea     ecx, [ebp - 0x24]
+0x004C602B  e83025f4ff         call    0x408560
+0x004C6030  0fb6c8             movzx   ecx, al
+0x004C6033  85c9               test    ecx, ecx
+0x004C6035  0f8433010000       je      0x4c616e
+0x004C603B  8d4ddc             lea     ecx, [ebp - 0x24]
+0x004C603E  e88d25f4ff         call    0x4085d0
+0x004C6043  8b10               mov     edx, dword ptr [eax]
+0x004C6045  8955f4             mov     dword ptr [ebp - 0xc], edx
+0x004C6048  837df400           cmp     dword ptr [ebp - 0xc], 0
+0x004C604C  0f                 db      0x0F
+0x004C604D  8409               test    byte ptr [ecx], cl
+0x004C604F  01                 db      0x01

@@ -1,0 +1,16 @@
+﻿0x0048C4B9  c780a005000000000000     mov    dword ptr [eax + 0x5a0], 0
+0x0048FBA8  c781a005000003000000     mov    dword ptr [ecx + 0x5a0], 3
+0x0048FBC4  c780a005000002000000     mov    dword ptr [eax + 0x5a0], 2
+0x0048FBF6  c780a005000003000000     mov    dword ptr [eax + 0x5a0], 3
+0x0048FC12  c782a005000002000000     mov    dword ptr [edx + 0x5a0], 2
+0x0048FC42  c781a005000002000000     mov    dword ptr [ecx + 0x5a0], 2
+0x0048FC74  c781a005000003000000     mov    dword ptr [ecx + 0x5a0], 3
+0x0048FEA4  c781a005000002000000     mov    dword ptr [ecx + 0x5a0], 2
+0x0048FED6  c781a005000003000000     mov    dword ptr [ecx + 0x5a0], 3
+0x00490018  c782a005000002000000     mov    dword ptr [edx + 0x5a0], 2
+0x00490C3C  c780a005000001000000     mov    dword ptr [eax + 0x5a0], 1
+0x00490D2A  c782a005000005000000     mov    dword ptr [edx + 0x5a0], 5
+0x00490D73  c781a005000004000000     mov    dword ptr [ecx + 0x5a0], 4
+0x00490D8F  c780a005000002000000     mov    dword ptr [eax + 0x5a0], 2
+0x00490DFC  c780a005000000000000     mov    dword ptr [eax + 0x5a0], 0
+total 15

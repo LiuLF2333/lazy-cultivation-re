@@ -1,7 +1,8 @@
-# 懒人修仙传 —— 逆向分析与战斗加速补丁
+# 懒人修仙传 —— 逆向分析与自动化补丁
 
 对《懒人修仙传》v1.1.1.11（Steam 版，PE32 x86 / MFC，未加壳）的静态逆向分析，
-以及在其基础上做出的**战斗回合加速补丁**与**原生 GDI 句柄泄漏修复**。
+以及在其基础上做出的**战斗回合加速**、**原生 GDI 句柄泄漏修复**与
+**可靠的副本失败自动重战**。
 
 > 本仓库**不包含**游戏本体、DLL、美术资源与存档（见 `.gitignore`）。
 > 所有补丁产物都由仓库内的脚本从**你自己的正版 exe** 现场生成。
@@ -14,35 +15,39 @@
 |---|---|
 | 战斗速度 | 原版 1 战斗帧/秒 → **约 600 帧/秒**（约 1000~5000 只/分），且不阻塞 UI 操作 |
 | 花屏问题 | 定位并修复游戏**原生 GDI 句柄泄漏**（原 +9.6 句柄/秒，约 22 分钟撞上 10000 上限） |
+| 副本重战 | 重写自动重战：不再依赖被闸门挡住的状态机，**任何副本类型失败后都会自己开下一把** |
 | 原版改动 | 生成新文件，`懒人修仙传.exe` 全程未被修改，可随时回退 |
-| 验证方式 | 静态反汇编 + Unicorn x86 仿真（28 项断言）+ 运行时插桩实测 |
+| 验证方式 | 静态反汇编 + Unicorn x86 仿真（67 项断言）+ 运行时插桩实测 |
 
 ### 产物
 
 | 文件 | SHA-256 | 说明 |
 |---|---|---|
-| `懒人修仙传.exe`（原版） | `f7331e8282943ca2620666f530eb11046c97d0052e04664e2fc7d1d6b601ed3e` | 未改动 |
-| `懒人修仙传.speed2.exe` **推荐** | `31cf48aa75f2f6594c7e2eedab787f64cfb055237e5a76cdac98cf114a6560c1` | 加速 + 修泄漏，**保留 ASLR**（代码全位置无关） |
+| `懒人修仙传.exe.bak.*`（原版） | `a84de8dc435c7765e38a62c89c6abfeeff4a1e80d8d04c707407ac52c20556d5` | 未改动 |
+| `懒人修仙传.final.exe` **推荐** | `563b70fbc4cc9dc657b292e2de753b4f2c07de5b84f96e45a196cc90b9d61185` | 自动副本 + 加速 + 修泄漏 + 新自动重战 |
+| `懒人修仙传.wild.exe` | `f7331e8282943ca2620666f530eb11046c97d0052e04664e2fc7d1d6b601ed3e` | 仅自动副本/采集 |
+| `懒人修仙传.speed3.exe` | `31cf48aa75f2f6594c7e2eedab787f64cfb055237e5a76cdac98cf114a6560c1` | 自动副本 + 加速 + 修泄漏（不含新重战） |
+| `懒人修仙传.speed2.exe` | `31cf48aa75f2f6594c7e2eedab787f64cfb055237e5a76cdac98cf114a6560c1` | 加速 + 修泄漏（与 speed3 字节相同） |
 | `懒人修仙传.speed.exe` | `74a3860c5cbe4cc4ab3581a7de307fea4cf96a1bd1e4d4a13d58bc00bcc241f0` | 同上，但关闭了 ASLR（早期版本） |
 
-两者功能一致，仅 ASLR 处理方式不同。**新装请用 `speed2`。**
+功能逐级累积，**新装请用 `final`**。所有版本都保留 ASLR（代码全位置无关）。
 
 ---
 
 ## 二、快速开始
 
 ```powershell
-# 1. 生成需要的全部产物（各自带原始字节校验，版本不符会拒绝写入）
-python _analysis\battle\patch_battle_speed.py "D:\XiuXian\懒人修仙传.speed2.exe"
+# 1. 从原版一次性生成 final（自动副本 → 加速+修泄漏 → 新自动重战）
+python _analysis\build_all.py
 
 # 2. 验证
+python _analysis\test_retry3.py                    # 新自动重战 39 项
 python _analysis\battle\verify_battle_speed.py     # 字节差异 / PE 头 / 反汇编
 python _analysis\battle\harness_battle_speed.py    # 加速代码洞 17 项
 python _analysis\battle\harness_leakfix.py         # 泄漏修复代码洞 11 项
 
-# 3. 直接双击运行 speed2.exe；或备份后覆盖原版
-Copy-Item '懒人修仙传.exe' "懒人修仙传.exe.bak.$(Get-Date -Format yyyyMMdd-HHmmss)"
-Copy-Item '懒人修仙传.speed2.exe' '懒人修仙传.exe' -Force
+# 3. 备份后覆盖安装
+python _analysis\build_all.py --install
 ```
 
 调参（`_analysis/battle/patch_battle_speed.py` 顶部）：
@@ -99,18 +104,43 @@ Copy-Item '懒人修仙传.speed2.exe' '懒人修仙传.exe' -Force
 
 修复后实测：GDI 句柄 20 分钟保持 283→288 的摆动（原为 +9.6/秒直线）。
 
+### 3.5 副本失败自动重战（v3）
+
+旧方案只在失败出口把 `[rt+0x5A0]` 写成 4，指望游戏自己的状态机接上，
+于是被 `WM_TIMER 0x3E9` 里的 `0x4C5F7D je`（**副本类型必须 == 1**）挡住：
+非类型 1 的副本失败后状态机永不执行，只能手点。
+
+新方案三步，全部绕开被闸门控制的路径：
+
+| 步骤 | 位置 | 内容 |
+|---|---|---|
+| 埋点 | `0x48FE4C`（失败唯一出口，result 3/4 走别的跳转到这里之前的代码） | 置 `PEND=1`、清冷却 |
+| 执行 | `0x4C5D66`（每 100 ms 必然执行的定时器指令，链式接入加速代码洞） | 冷却到期后清状态，`call 0x490E40`——**与手动点"进入"完全同一个函数** |
+| 修栈 | `0x703E66` | 爆发代码洞 `jmp` 尾改 `ret`，修掉每拍漏 4 字节栈 |
+
+重开的那一拍**主动跳过加速爆发**，避免新战斗在同一回调里被驱动。
+代码与状态放在 `.washd` 节尾部（该节从 1 页扩到 2 页，末节、无需搬移 raw 指针）。
+
+细节与完整反汇编见 [`副本自动重战设计.md`](副本自动重战设计.md)。
+
 ---
 
 ## 四、目录结构
 
 ```
 ├─ 战斗加速可行性报告.md          ★ 完整技术报告（含全部地址与验证数据）
+├─ 副本自动重战设计.md            ★ 自动重战：旧方案为何卡、新方案怎么做
 ├─ 项目分析报告.md / 数据表作用说明.md / 功能可行性报告.md
 ├─ gjd_editor.py / mod_editor.py   数据表与 MOD 编辑器
 └─ _analysis/
+   ├─ build_all.py              ★ 一键构建：原版 → wild → speed3 → final
    ├─ petool.py                  PE32 地址映射 + 反汇编工具（所有脚本的基础）
+   ├─ patch_wild_autocollect.py  自动副本 / 自动采集 / 野外自动化
+   ├─ patch_dungeon_retry3.py    可靠的副本失败自动重战（新）
+   ├─ test_retry3.py             其 Unicorn 仿真：39 项断言
+   ├─ patch_dungeon_retry2.py    上一版重战设计（已被 v3 取代，留作参考）
    ├─ battle/                    ★ 战斗加速与 GDI 泄漏修复
-   │  ├─ patch_battle_speed.py      构建补丁（3 处钩子 + 2 个代码洞）
+   │  ├─ patch_battle_speed.py      构建补丁（3 处钩子 + 2 个代码洞 + 泄漏修复）
    │  ├─ verify_battle_speed.py     字节差异 / PE 头 / 反汇编校验
    │  ├─ harness_battle_speed.py    Unicorn 仿真：加速代码洞 17 项
    │  ├─ harness_leakfix.py         Unicorn 仿真：泄漏修复代码洞 11 项
@@ -132,6 +162,8 @@ Copy-Item '懒人修仙传.speed2.exe' '懒人修仙传.exe' -Force
 | 进游戏闪退（v4a） | 用 `edx` 存状态指针，而 `rdtsc` 会写 `edx:eax` | 改用 `edi`；仿真改为真实执行 `rdtsc` |
 | 进游戏闪退（v4b） | 泄漏修复代码用绝对 IAT 地址，而镜像被 ASLR 重定位 | 改为由返回地址推算偏移（`speed2`） |
 | 进程被自己弄崩 | 热补丁把 `.wash` 保护改成 `PAGE_READWRITE`，摘掉了代码洞的执行权限 | 该页必须用 `PAGE_EXECUTE_READWRITE` |
+| 自动重战"有时行有时不行" | 只写了状态 4，而状态机被 `0x4C5F7D je`（副本类型==1）挡住 | 直接调 `0x490E40`（按钮回调那条路），挂在无条件的 100 ms 定时器上 |
+| 加速代码洞每拍漏 4 字节栈 | 代码洞被 `call` 进入，结尾却是 `jmp` 不返回 | 尾部改 `ret`，落到 `0x4C5D66` 钩子留下的返回槽 |
 
 ---
 
